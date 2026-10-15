@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+{{ m.hero('hero-services', page.hero_title, page.hero_text, None, [{'label': 'Start a project', 'href': '/quote', 'arrow': true}, {'label': 'View capabilities', 'href': '#services', 'cls': 'btn--ghost'}], cls='hero--page hero--soft') }}
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(1, 'Services') }}
+      <h2 class="h2">Everything from the drawing to the delivery.</h2>
+    </div>
+    {{ m.carousel(svc_cards(), 'Services') }}
+    <div class="also">
+      <p class="eyebrow">Also available</p>
+      <div class="lcards">
+        {% for s in services if s.tier != 'core' %}
+        <a class="lcard" href="{{ u('/services/' ~ s.slug) }}">
+          <h3 class="lcard__title">{{ s.name }}</h3>
+          <p class="lcard__text">{{ s.short }}</p>
+          <span class="link-mono">View service</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-light section">
+  <div class="wrap">
+    <div class="numbers__head">
+      <div class="heading-group">
+        {{ m.eyebrow(2, 'By the numbers', dark=true) }}
+        <h2 class="h2">{{ page.numbers_title }}</h2>
+      </div>
+      <p>{{ page.numbers_text }}</p>
+    </div>
+    <div class="numbers">
+      {% for n in page.numbers %}
+      <div>
+        <p class="number__value">{{ n.value }}</p>
+        <p class="number__label">{{ n.label }}</p>
+        <p class="number__text">{{ n.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ m.faq(3, 'Frequently asked questions.', site.faqs_moulding) }}
+{{ m.industries(4) }}
+{{ m.quote_panel(5, 'q') }}
+{% endblock %}

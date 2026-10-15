@@ -1,0 +1,435 @@
+[
+  {
+    "slug": "injection-moulding",
+    "name": "Injection moulding",
+    "seo_title": "Injection Moulding Services UK | Ertone Plastics",
+    "short": "Precision parts made at volume, with tight tolerances and a finish that holds up batch after batch.",
+    "hero_line": "Our core discipline. Production on 100 - 600 tonne presses, held to drawing run after run.",
+    "meta_description": "UK injection moulding in Aylesbury since 1982. 100 - 600 tonne Billion and Haitian presses, parts from 1g to 4kg in PC, PP, GPPS, ABS and nylon. Tool transfer welcome.",
+    "overview_title": "From small precision parts to large structural mouldings.",
+    "overview": [
+      "Precision parts made at volume, with tight tolerances and a finish that holds up batch after batch. We run Billion and Haitian presses from 100 to 600 tonnes, with robot arms and conveyors, for parts from 1 gram up to 4 kilograms.",
+      "We mould polycarbonate, polypropylene, polystyrene, ABS and nylon. We are known for high quality clear parts. Bring us a new part, or move an existing tool to Ertone and we will get it back into production."
+    ],
+    "capabilities": [
+      {
+        "title": "Low to high volume",
+        "text": "Short runs through to high volume production."
+      },
+      {
+        "title": "Repeat production",
+        "text": "Parts held to drawing run after run."
+      },
+      {
+        "title": "Concept to production",
+        "text": "From a drawing, sample or concept to a production tool designed, built and trialled."
+      }
+    ],
+    "facts": [
+      [
+        "Clamp force",
+        "100 - 600 tonnes"
+      ],
+      [
+        "Part weight",
+        "1g - 4kg"
+      ],
+      [
+        "Presses",
+        "Billion and Haitian, with robot arms"
+      ],
+      [
+        "Materials",
+        "PC, PP, GPPS, ABS and nylon"
+      ]
+    ],
+    "tags": [
+      "100 - 600t",
+      "Low to high volume",
+      "Repeat production"
+    ],
+    "related": [
+      "tool-manufacture",
+      "design-prototype",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "hero-injection-moulding",
+      "overview": "ov-injection-moulding",
+      "card": "card-injection"
+    },
+    "faqs": "moulding",
+    "designed": true,
+    "tier": "core"
+  },
+  {
+    "slug": "tool-manufacture",
+    "name": "Tool manufacture",
+    "seo_title": "Injection Mould Tool Manufacture and Tool Transfer | Ertone",
+    "short": "Production tools designed, built and trialled. Or move your existing tool to Ertone.",
+    "hero_line": "Production tools designed, built and trialled. Or bring us the tool you already have.",
+    "meta_description": "Injection mould tools designed, built and trialled for production, plus tool transfer from other moulders. Ertone Plastics, Aylesbury.",
+    "overview_title": "The right tool, first time.",
+    "overview": [
+      "Every moulded part starts with the tool. We advise on tool design and the best tooling option for your part, volumes and budget, then the production tool is designed, built and trialled before volume production starts.",
+      "Already have a tool with another supplier? We can take it on and get your parts back into production at our Aylesbury factory."
+    ],
+    "capabilities": [
+      {
+        "title": "Tooling advice",
+        "text": "The best tooling option for your part, volumes and budget."
+      },
+      {
+        "title": "Build and trial",
+        "text": "Production tools designed, built and trialled before volume production."
+      },
+      {
+        "title": "Tool transfer",
+        "text": "Move an existing tool to Ertone without starting again."
+      }
+    ],
+    "facts": [
+      [
+        "Tools",
+        "New tools or transferred tools"
+      ],
+      [
+        "Trials",
+        "Sampling and trials before production"
+      ],
+      [
+        "Presses",
+        "100 - 600 tonnes"
+      ],
+      [
+        "Next step",
+        "Volume production in Aylesbury"
+      ]
+    ],
+    "tags": [
+      "Tooling advice",
+      "Tool trials",
+      "Tool transfer"
+    ],
+    "related": [
+      "injection-moulding",
+      "design-prototype",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "ov-vacuum-forming",
+      "overview": "card-injection",
+      "card": "ov-vacuum-forming"
+    },
+    "faqs": "moulding",
+    "designed": false,
+    "tier": "core"
+  },
+  {
+    "slug": "design-prototype",
+    "name": "Design and prototype",
+    "seo_title": "Plastic Product Design and Prototyping | Ertone",
+    "short": "Test the idea early. We design, refine and prototype so the final part works first time.",
+    "hero_line": "Test the idea early. We design, refine and prototype so the final part works first time.",
+    "meta_description": "Plastic part design and prototyping from a drawing, CAD file or idea. Material, design and tooling advice so the final part works first time. Ertone Plastics.",
+    "overview_title": "Test the idea early.",
+    "overview": [
+      "Product success starts with great design. We invest time in product design from the outset, refining every detail to improve performance, simplify manufacture and, wherever possible, reduce the overall cost of production.",
+      "Start from a drawing, a CAD file or just an idea. We consider every aspect of the project, from material selection and wall thicknesses to material properties and manufacturing requirements. Dealing with these early helps avoid production delays and rework, and gives you a part that is efficient and cost effective to make."
+    ],
+    "capabilities": [
+      {
+        "title": "Design",
+        "text": "Parts designed for manufacture, with DFM and material selection."
+      },
+      {
+        "title": "Refine",
+        "text": "Changes that make a part stronger, simpler or easier to produce."
+      },
+      {
+        "title": "Prototype",
+        "text": "Prototype parts to test fit and function before production tooling."
+      }
+    ],
+    "facts": [
+      [
+        "Input",
+        "Drawing, CAD file or idea"
+      ],
+      [
+        "Stages",
+        "Design, refine, prototype"
+      ],
+      [
+        "Output",
+        "Prototype parts"
+      ],
+      [
+        "Next step",
+        "Production tool designed, built and trialled"
+      ]
+    ],
+    "tags": [
+      "DFM",
+      "Material selection",
+      "Prototype parts"
+    ],
+    "related": [
+      "injection-moulding",
+      "tool-manufacture",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "hero-design-prototype",
+      "overview": "ov-design-prototype",
+      "card": "card-design"
+    },
+    "faqs": null,
+    "designed": true,
+    "tier": "core"
+  },
+  {
+    "slug": "secondary-operations",
+    "name": "Secondary operations",
+    "seo_title": "Printing, Welding, Assembly and Packing | Ertone",
+    "short": "Print, weld, assemble, pack and dispatch, so parts leave ready to use.",
+    "hero_line": "Printing, welding, assembly and packing, so parts leave the factory ready to use.",
+    "meta_description": "Printing, welding, assembly and packing for injection moulded parts, handled in house by Ertone Plastics in Aylesbury.",
+    "overview_title": "Finished parts, ready to ship.",
+    "overview": [
+      "Moulding is only part of the job. We print, weld, assemble and pack parts at our Aylesbury factory, so they arrive finished and ready for your line.",
+      "Keeping these steps with the moulder cuts handling and handovers between suppliers, and keeps lead times under control."
+    ],
+    "capabilities": [
+      {
+        "title": "Printing",
+        "text": "Logos, branding and markings printed onto moulded parts."
+      },
+      {
+        "title": "Welding and assembly",
+        "text": "Parts welded and assembled to your specification."
+      },
+      {
+        "title": "Packing and dispatch",
+        "text": "Packed to suit your line and delivered on time."
+      }
+    ],
+    "facts": [
+      [
+        "Processes",
+        "Printing, welding, assembly, packing"
+      ],
+      [
+        "Where",
+        "In house in Aylesbury"
+      ],
+      [
+        "Volume",
+        "Low to high"
+      ],
+      [
+        "Quality",
+        "ISO 9001 certified"
+      ]
+    ],
+    "tags": [
+      "Printing",
+      "Welding",
+      "Assembly",
+      "Packing"
+    ],
+    "related": [
+      "injection-moulding",
+      "tool-manufacture",
+      "closed-loop-recycling"
+    ],
+    "img": {
+      "hero": "hero-fabrication-assembly",
+      "overview": "ov-fabrication-assembly",
+      "card": "ov-fabrication-assembly"
+    },
+    "faqs": null,
+    "designed": false,
+    "tier": "core"
+  },
+  {
+    "slug": "closed-loop-recycling",
+    "name": "Closed loop recycling",
+    "seo_title": "Closed Loop Plastic Recycling | Ertone",
+    "short": "We collect used and damaged products, recycle them and mould the material into new parts.",
+    "hero_line": "Every part we make is a chance to waste less.",
+    "meta_description": "Ertone's closed loop recycling system collects used plastic products free of charge, reprocesses them in Aylesbury and moulds the material into new products.",
+    "overview_title": "Keeping plastic in use.",
+    "overview": [
+      "We keep plastic in use for longer by turning waste back into material we can mould again. It is collected, reprocessed and returned to the manufacturing cycle, which cuts waste and the demand for virgin material.",
+      "We collect broken or damaged products from your site free of charge. At our factory they are cleaned, sorted by material, shredded and turned into pellets, then moulded into new products and delivered to you as normal. At the end of their life, they come back and go round again."
+    ],
+    "capabilities": [
+      {
+        "title": "Free collection",
+        "text": "Used and damaged products collected from your site at no charge."
+      },
+      {
+        "title": "Reprocessed in house",
+        "text": "Cleaned, sorted, shredded and pelletised at our factory."
+      },
+      {
+        "title": "Moulded again",
+        "text": "Recycled material moulded into new products for you."
+      }
+    ],
+    "facts": [
+      [
+        "Collection",
+        "Free of charge from your site"
+      ],
+      [
+        "Process",
+        "Clean, sort, shred, pelletise, mould"
+      ],
+      [
+        "Delivery",
+        "To your distribution centre as normal"
+      ],
+      [
+        "End of life",
+        "Collected again and back round the loop"
+      ]
+    ],
+    "tags": [
+      "Free collection",
+      "Reprocessed in house",
+      "Moulded again"
+    ],
+    "related": [
+      "injection-moulding",
+      "design-prototype",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "hero-closed-loop",
+      "overview": "ov-closed-loop",
+      "card": "ov-closed-loop"
+    },
+    "faqs": null,
+    "designed": true,
+    "tier": "core"
+  },
+  {
+    "slug": "vacuum-forming",
+    "name": "Vacuum forming",
+    "seo_title": "Vacuum Forming Services UK | Ertone",
+    "short": "Large, lightweight parts formed fast. Ideal for trays, covers and housings in short or medium runs.",
+    "hero_line": "Large, lightweight parts formed fast. Ideal for trays, covers and housings.",
+    "meta_description": "Vacuum forming for large, lightweight trays, covers and housings in short or medium runs. Ertone Plastics, Aylesbury.",
+    "overview_title": "Large parts, formed fast.",
+    "overview": [
+      "Large, lightweight parts formed quickly and efficiently. Vacuum forming is ideal for trays, covers, housings and other components where size, consistency and cost matter, particularly across short to medium production runs."
+    ],
+    "capabilities": [
+      {
+        "title": "Trays and covers",
+        "text": "Ideal for trays, covers and housings."
+      },
+      {
+        "title": "Short to medium runs",
+        "text": "Formed fast in short or medium runs."
+      },
+      {
+        "title": "Supplied with your parts",
+        "text": "Formed parts supplied alongside your moulded components."
+      }
+    ],
+    "facts": [
+      [
+        "Typical parts",
+        "Trays, covers, housings"
+      ],
+      [
+        "Run size",
+        "Short to medium"
+      ],
+      [
+        "Part size",
+        "Large and lightweight"
+      ]
+    ],
+    "tags": [
+      "Trays and covers",
+      "Short runs",
+      "Large parts"
+    ],
+    "related": [
+      "injection-moulding",
+      "design-prototype",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "hero-vacuum-forming",
+      "overview": "ov-vacuum-forming",
+      "card": "card-vacuum"
+    },
+    "faqs": null,
+    "designed": true,
+    "tier": "secondary"
+  },
+  {
+    "slug": "fabrication-assembly",
+    "name": "Fabrication and assembly",
+    "seo_title": "Plastic Fabrication and Assembly | Ertone",
+    "short": "Fabrication and assembly for parts that need more than moulding, from single components to finished assemblies.",
+    "hero_line": "From individual components to finished assemblies, alongside your moulded parts.",
+    "meta_description": "Plastic fabrication and assembly from single components to finished assemblies, one off builds to repeat production. Ertone Plastics, Aylesbury.",
+    "overview_title": "Every stage of the part.",
+    "overview": [
+      "From individual components through to finished assemblies, we support the wider manufacturing process with practical, production focused expertise.",
+      "Keeping several stages with one supplier improves consistency, reduces handling and keeps lead times under control. From one off builds to repeat production, every part is checked and assembled to the required specification."
+    ],
+    "capabilities": [
+      {
+        "title": "Fabrication",
+        "text": "Components fabricated and finished to specification."
+      },
+      {
+        "title": "Assembly",
+        "text": "From individual parts to complete assemblies."
+      },
+      {
+        "title": "Quality checks",
+        "text": "Every part checked against the specification before it ships."
+      }
+    ],
+    "facts": [
+      [
+        "Scope",
+        "Components to finished assemblies"
+      ],
+      [
+        "Volume",
+        "One off builds to repeat production"
+      ],
+      [
+        "Alongside",
+        "Your injection moulded parts"
+      ]
+    ],
+    "tags": [
+      "Fabrication",
+      "Assembly",
+      "Quality checks"
+    ],
+    "related": [
+      "secondary-operations",
+      "injection-moulding",
+      "vacuum-forming"
+    ],
+    "img": {
+      "hero": "hero-fabrication-assembly",
+      "overview": "ov-fabrication-assembly",
+      "card": "ov-fabrication-assembly"
+    },
+    "faqs": null,
+    "designed": true,
+    "tier": "secondary"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "name": "ertone-website",
+  "version": "1.0.0",
+  "description": "Ertone Plastics website. Static pages built by src/build.py, forms handled by Vercel functions in api/.",
+  "scripts": {
+    "site": "python3 src/build.py",
+    "site:strict": "python3 src/build.py --strict",
+    "site:preview": "python3 src/build.py --preview",
+    "test": "node --test tests/*.test.js",
+    "check": "python3 tools/check.py public"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "potrace": "^2.1.8"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
+}

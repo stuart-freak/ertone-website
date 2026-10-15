@@ -1,0 +1,39 @@
+{% set section = '/' ~ path.strip('/').split('/')[0] if path != '/' else '/' %}
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="logo" href="{{ u('/') }}" aria-label="Ertone home">{{ icon('wordmark') }}</a>
+    <nav class="nav__links" aria-label="Main">
+      {% for item in site.nav %}
+      {% if item.menu %}
+      <div class="nav__item" data-menu>
+        <button class="nav__link" type="button" aria-expanded="false" aria-haspopup="true"{% if section == item.href %} aria-current="page"{% endif %}><span>{{ item.label }}</span>{{ icon('chev') }}</button>
+        <div class="mega">
+          <div class="mega__head">{{ item.label }}</div>
+          {% if item.menu == 'services' %}
+            {% for s in services if s.tier == 'core' %}<a href="{{ u('/services/' ~ s.slug) }}">{{ s.name }}</a>{% endfor %}
+            <div class="mega__head mega__head--sub">Also available</div>
+            {% for s in services if s.tier != 'core' %}<a href="{{ u('/services/' ~ s.slug) }}">{{ s.name }}</a>{% endfor %}
+            <a class="mega__all" href="{{ u('/services') }}">All services →</a>
+          {% else %}
+            {% for s in sectors %}<a href="{{ u('/sectors/' ~ s.slug) }}">{{ s.name }}</a>{% endfor %}
+            <a class="mega__all" href="{{ u('/sectors') }}">All sectors →</a>
+          {% endif %}
+        </div>
+      </div>
+      {% else %}
+      <div class="nav__item"><a class="nav__link" href="{{ u(item.href) }}"{% if section == item.href %} aria-current="page"{% endif %}><span>{{ item.label }}</span></a></div>
+      {% endif %}
+      {% endfor %}
+    </nav>
+    <a class="btn btn--mint nav__cta" href="{{ u('/quote') }}">Request a quote</a>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a href="{{ u('/services') }}">Services</a>
+    {% for s in services %}<a class="sub" href="{{ u('/services/' ~ s.slug) }}">{{ s.name }}</a>{% endfor %}
+    <a href="{{ u('/sectors') }}">Sectors</a>
+    {% for s in sectors %}<a class="sub" href="{{ u('/sectors/' ~ s.slug) }}">{{ s.name }}</a>{% endfor %}
+    {% for item in site.nav if not item.menu %}<a href="{{ u(item.href) }}">{{ item.label }}</a>{% endfor %}
+    <a class="btn btn--mint" href="{{ u('/quote') }}">Request a quote</a>
+  </nav>
+</header>

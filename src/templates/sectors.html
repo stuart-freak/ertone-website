@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+{{ m.hero('hero-sectors', page.hero_title, page.hero_text, None, [{'label': 'Start a project', 'href': '/quote', 'arrow': true}, {'label': 'View sectors', 'href': '#sectors', 'cls': 'btn--ghost'}], cls='hero--page hero--soft') }}
+
+<section class="section" id="sectors">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(1, 'Sectors') }}
+      <h2 class="h2">Parts for the industries that depend on them.</h2>
+    </div>
+    {{ m.carousel(sec_cards(), 'Sectors') }}
+  </div>
+</section>
+
+{{ m.process(2) }}
+{{ m.faq(3, 'Frequently asked questions.', page.faqs) }}
+{{ m.industries(4, None, 'Every industry we mould for.') }}
+{{ m.quote_panel(5, 'q') }}
+{% endblock %}

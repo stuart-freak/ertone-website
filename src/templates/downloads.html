@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+{{ m.hero('hero-services', page.hero_title, page.hero_text, None, None, cls='hero--page hero--soft') }}
+<section class="section">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(1, 'Downloads') }}
+      <h2 class="h2">Documents.</h2>
+    </div>
+    <ul class="dl-list">
+      {% for it in items %}
+      <li class="dl">
+        <div>
+          <h3 class="dl__title">{{ it.title }}<span class="dl__type">{{ it.type }}</span></h3>
+          <p class="dl__text">{{ it.text }}</p>
+        </div>
+        {% if it.available %}
+        <a class="btn btn--mint" href="{{ asset(it.file) }}" download>Download {{ icon('download') }}</a>
+        {% else %}
+        <span class="dl__soon">{{ it.status|default('Coming soon') }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{{ m.cta('Have a part in mind?') }}
+{% endblock %}

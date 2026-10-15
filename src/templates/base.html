@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+{% if noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large">{% endif %}
+
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:type" content="{{ og_type|default('website') }}">
+<meta property="og:site_name" content="{{ site.legal_name }}">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ share }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#323232">
+<link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
+<link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}">
+<link rel="preload" href="{{ asset('assets/fonts/archivo.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ asset('assets/fonts/plex-mono-400.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ asset('assets/site.css') }}">
+{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
+{% if site.bing_site_verification %}<meta name="msvalidate.01" content="{{ site.bing_site_verification }}">{% endif %}
+{% if site.gtm_id and not preview %}
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem("ertone_consent")}catch(e){}
+var g=c==="all"?"granted":"denied";
+gtag("consent","default",{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,functionality_storage:"granted",security_storage:"granted",wait_for_update:500});
+gtag("set","ads_data_redaction",true);
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","{{ site.gtm_id }}");
+</script>
+{% endif %}
+{% if site.turnstile_site_key and not preview %}<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>{% endif %}
+{{ ld }}
+</head>
+<body data-root="{{ asset('') }}" data-email="{{ site.email }}"{% if preview %} data-preview{% endif %}>
+<a class="skip" href="#main">Skip to content</a>
+{% include "_nav.html" %}
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+{% include "_footer.html" %}
+<div class="cookie" role="dialog" aria-live="polite" aria-label="Cookie settings">
+  <p>We use essential cookies to run this site. With your permission we also use analytics and advertising cookies to understand how the site is used and to measure our campaigns. <a href="{{ u('/cookies') }}">Cookie policy</a></p>
+  <div class="btns">
+    <button class="btn btn--mint" type="button" data-consent="all">Accept all</button>
+    <button class="btn btn--ghost" type="button" data-consent="essential">Essential only</button>
+  </div>
+</div>
+{% if preview %}<div class="preview-ribbon">Preview build</div>{% endif %}
+<script src="{{ asset('assets/site.js') }}" defer></script>
+</body>
+</html>

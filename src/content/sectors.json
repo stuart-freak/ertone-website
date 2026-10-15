@@ -1,0 +1,466 @@
+[
+  {
+    "slug": "aerospace",
+    "name": "Aerospace",
+    "seo_title": "Aerospace and Airline Plastic Parts | Ertone",
+    "card_name": "Aviation",
+    "short": "Lightweight, tough components made for life at 35,000 feet and thousands of turnarounds.",
+    "hero_line": "Lightweight, tough components made for life at 35,000 feet and thousands of turnarounds.",
+    "meta_description": "Injection moulded airline and aerospace parts, including trolley trays, galley drawers and bins. Supplying the largest UK carriers for over 30 years. Ertone Plastics.",
+    "overview_title": "Built for life at 35,000 feet.",
+    "overview": [
+      "Lightweight, durable components engineered for demanding aerospace environments. We produce precision formed and moulded parts for interiors, housings, covers and other applications where strength, consistency and low weight are critical.",
+      "We have worked with the largest UK carriers for over 30 years, supplying drawers, trays, bins and many more products. We regularly receive supplier awards for quality and on time service. From prototype development through to repeat production, every component is made with close attention to fit, finish and performance."
+    ],
+    "trio_title": "Light. Tough. Repeatable.",
+    "trio": [
+      {
+        "title": "Light",
+        "text": "Components that cut weight without giving up strength."
+      },
+      {
+        "title": "Tough",
+        "text": "Parts that hold up through thousands of turnarounds."
+      },
+      {
+        "title": "Repeatable",
+        "text": "Every part held to drawing, run after run."
+      }
+    ],
+    "products_title": "Cabin equipment we make.",
+    "products": [
+      {
+        "name": "Trolley trays",
+        "text": "Serving trays for trolley and cabin service.",
+        "img": "prod-trolley-trays"
+      },
+      {
+        "name": "Galley drawers",
+        "text": "Drawers and inserts for galley storage.",
+        "img": "prod-galley-drawers"
+      },
+      {
+        "name": "Meal trays",
+        "text": "Compartment trays for meal service.",
+        "img": "prod-meal-trays"
+      }
+    ],
+    "facts": [
+      [
+        "Typical parts",
+        "Trays, drawers, bins"
+      ],
+      [
+        "Customers",
+        "Major UK airlines for 30+ years"
+      ],
+      [
+        "Run size",
+        "Low to high volume"
+      ],
+      [
+        "Materials",
+        "PC, PP, ABS and more"
+      ]
+    ],
+    "faq_noun": "aerospace",
+    "related": [
+      "injection-moulding",
+      "design-prototype",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "hero-aerospace",
+      "overview": "ov-aerospace",
+      "card": "card-aviation"
+    },
+    "designed": true,
+    "products_label": "Parts we make"
+  },
+  {
+    "slug": "construction",
+    "name": "Construction",
+    "seo_title": "Plastic Construction Products and Tools | Ertone",
+    "short": "Buckets, trowels, scrapers and mallets built for life on site.",
+    "hero_line": "Tough, repeatable parts for building sites, from buckets and trowels to scrapers and mallets.",
+    "meta_description": "Injection moulded construction products and tools, from buckets and trowels to scrapers and mallets. UK production with dependable lead times. Ertone Plastics.",
+    "overview_title": "Construction solutions.",
+    "overview": [
+      "Ertone provides plastic injection moulding for construction applications where durability, consistency and supply reliability are essential. We manufacture components used across housing, infrastructure and building systems, supporting customers with high volume production and long term supply programmes.",
+      "Our range runs from buckets and trowels to scrapers and mallets, built for harsh conditions on site. UK based production supports both new product introductions and ongoing supply, with consistent quality and dependable lead times."
+    ],
+    "trio_title": "Tough. Repeatable. Reliable.",
+    "trio": [
+      {
+        "title": "Tough",
+        "text": "Tools and parts built for harsh conditions on site."
+      },
+      {
+        "title": "Repeatable",
+        "text": "Every batch held to drawing, run after run."
+      },
+      {
+        "title": "Reliable",
+        "text": "UK production for new products and long term supply."
+      }
+    ],
+    "facts": [
+      [
+        "Typical parts",
+        "Buckets, trowels, scrapers, mallets"
+      ],
+      [
+        "Run size",
+        "High volume and long term supply"
+      ],
+      [
+        "Production",
+        "UK based, in Aylesbury"
+      ],
+      [
+        "Materials",
+        "Advised at engineer review"
+      ]
+    ],
+    "faq_noun": "construction",
+    "related": [
+      "injection-moulding",
+      "tool-manufacture",
+      "closed-loop-recycling"
+    ],
+    "img": {
+      "hero": "hero-construction",
+      "overview": "ov-construction",
+      "card": "ov-construction"
+    },
+    "designed": true,
+    "products_label": "Example parts",
+    "products_title": "Construction parts we can mould.",
+    "products": [
+      {
+        "name": "Meter box housings",
+        "text": "Housings moulded to suit a specific meter and wall build up.",
+        "img": "prod-meter-housings"
+      },
+      {
+        "name": "Window system end caps",
+        "text": "Caps and covers made to fit one window profile system.",
+        "img": "prod-window-caps"
+      },
+      {
+        "name": "Cladding fixing clips",
+        "text": "Clips and brackets designed for one panel and rail system.",
+        "img": "prod-cladding-clips"
+      }
+    ]
+  },
+  {
+    "slug": "automation",
+    "name": "Automation",
+    "seo_title": "Precision Plastic Parts for Automation | Ertone",
+    "short": "Small precision parts that keep automated systems running smoothly.",
+    "hero_line": "Small precision parts that keep automated lines running, batch after batch.",
+    "meta_description": "Injection moulded precision parts for industrial automation, made to tight tolerances for long life and dependable performance. Ertone Plastics.",
+    "overview_title": "Automation solutions.",
+    "overview": [
+      "Industrial automation relies on high quality plastic parts for precision and reliability. We mould plastic components for the automation industry to a high standard, for a long lifespan and dependable performance. Well made parts keep automated systems running smoothly, cut maintenance and help lines stay on schedule. Small precision parts are our speciality.",
+      "Our parts are designed to suit a wide range of automation systems, so integration is simple. We work to tight tolerances and repeatable processes, so every batch matches the last, whether you order a prototype run or full production."
+    ],
+    "trio_title": "Precise. Durable. Repeatable.",
+    "trio": [
+      {
+        "title": "Precise",
+        "text": "Small parts made to tight tolerances."
+      },
+      {
+        "title": "Durable",
+        "text": "Long life parts that cut maintenance and downtime."
+      },
+      {
+        "title": "Repeatable",
+        "text": "Every batch matches the last, from prototype to full production."
+      }
+    ],
+    "facts": [
+      [
+        "Typical parts",
+        "Small precision components"
+      ],
+      [
+        "Run size",
+        "Prototype to full production"
+      ],
+      [
+        "Tolerances",
+        "Tight and repeatable"
+      ],
+      [
+        "Materials",
+        "Advised at engineer review"
+      ]
+    ],
+    "faq_noun": "automation",
+    "related": [
+      "injection-moulding",
+      "design-prototype",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "hero-automation",
+      "overview": "ov-automation",
+      "card": "ov-automation"
+    },
+    "designed": true,
+    "products_label": "Example parts",
+    "products_title": "Automation parts we can mould.",
+    "products": [
+      {
+        "name": "Product carriers",
+        "text": "Pucks shaped to hold one product securely along the line.",
+        "img": "prod-product-carriers"
+      },
+      {
+        "name": "Gripper fingers",
+        "text": "Fingers contoured to pick one part, cycle after cycle.",
+        "img": "prod-gripper-fingers"
+      },
+      {
+        "name": "Sensor housings",
+        "text": "Enclosures shaped around a specific sensor and its cabling.",
+        "img": "prod-sensor-housings"
+      }
+    ]
+  },
+  {
+    "slug": "sports",
+    "name": "Sports",
+    "seo_title": "Injection Moulded Parts for Sport | Ertone",
+    "short": "Durable, lightweight parts for sporting equipment, accessories and fixtures.",
+    "hero_line": "Lightweight, durable parts for equipment, accessories and fixtures that take repeated use.",
+    "meta_description": "Injection moulded plastic components for sports equipment, protective products, accessories and fixtures. Ertone Plastics, UK.",
+    "overview_title": "Sports solutions.",
+    "overview": [
+      "The sports industry depends on components that are lightweight, durable and made to perform consistently. Plastic is used in everything from training equipment and protective products to accessories, fixtures and specialist sporting goods, which makes injection moulding a natural fit.",
+      "We make high quality plastic components for the sports sector, helping businesses create dependable products that stand up to repeated use while meeting specific performance and design requirements. With experience across simple and more complex parts, we support projects across a broad range of sporting applications."
+    ],
+    "trio_title": "Light. Tough. Repeatable.",
+    "trio": [
+      {
+        "title": "Light",
+        "text": "Lightweight parts for equipment on the move."
+      },
+      {
+        "title": "Tough",
+        "text": "Built to stand up to repeated use."
+      },
+      {
+        "title": "Repeatable",
+        "text": "Consistent parts across every run."
+      }
+    ],
+    "facts": [
+      [
+        "Typical parts",
+        "Equipment parts, accessories, fixtures"
+      ],
+      [
+        "Complexity",
+        "Simple to complex parts"
+      ],
+      [
+        "Run size",
+        "Low to high volume"
+      ],
+      [
+        "Materials",
+        "Advised at engineer review"
+      ]
+    ],
+    "faq_noun": "sports",
+    "related": [
+      "injection-moulding",
+      "design-prototype",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "hero-sports",
+      "overview": "ov-sports",
+      "card": "ov-sports"
+    },
+    "designed": true,
+    "products_label": "Example parts",
+    "products_title": "Sports parts we can mould.",
+    "products": [
+      {
+        "name": "Stadium seats",
+        "text": "Seats moulded in a venue's colours to suit its fixing system.",
+        "img": "prod-stadium-seats"
+      },
+      {
+        "name": "Shin guard shells",
+        "text": "Protective shells made to a sports brand's own design.",
+        "img": "prod-shin-guards"
+      },
+      {
+        "name": "Equipment covers",
+        "text": "Covers and shrouds made for one gym machine design.",
+        "img": "prod-equipment-covers"
+      }
+    ]
+  },
+  {
+    "slug": "defence",
+    "name": "Defence",
+    "seo_title": "Injection Moulded Parts for Defence | Ertone",
+    "short": "Components made to specific material and performance requirements.",
+    "hero_line": "Precise, repeatable components made to specific material and performance requirements.",
+    "meta_description": "Injection moulded plastic components for defence applications, made to specific material, dimensional and performance requirements. ISO 9001 certified. Ertone Plastics.",
+    "overview_title": "Defence solutions.",
+    "overview": [
+      "Defence applications need components that perform reliably in challenging environments, where strength, consistency and precision are essential. Injection moulded plastics are used across a wide range of defence products and systems, offering a durable, lightweight and versatile option for both specialist and high volume work.",
+      "We make plastic components for the defence sector with a strong focus on quality and repeatability. We work to specific material, dimensional and performance requirements, so each part suits its intended use and is produced to a consistently high standard."
+    ],
+    "trio_title": "Strong. Precise. Repeatable.",
+    "trio": [
+      {
+        "title": "Strong",
+        "text": "Durable, lightweight parts for challenging environments."
+      },
+      {
+        "title": "Precise",
+        "text": "Made to specific material and dimensional requirements."
+      },
+      {
+        "title": "Repeatable",
+        "text": "Produced to a consistently high standard."
+      }
+    ],
+    "facts": [
+      [
+        "Typical parts",
+        "Specialist and high volume components"
+      ],
+      [
+        "Requirements",
+        "Material, dimensional, performance"
+      ],
+      [
+        "Quality",
+        "ISO 9001 certified"
+      ],
+      [
+        "Materials",
+        "Advised at engineer review"
+      ]
+    ],
+    "faq_noun": "defence",
+    "related": [
+      "injection-moulding",
+      "tool-manufacture",
+      "secondary-operations"
+    ],
+    "img": {
+      "hero": "hero-defence",
+      "overview": "ov-defence",
+      "card": "ov-defence"
+    },
+    "designed": true,
+    "products_label": "Example parts",
+    "products_title": "Defence parts we can mould.",
+    "products": [
+      {
+        "name": "Battery housings",
+        "text": "Housings shaped for one radio or device and sealed for the field.",
+        "img": "prod-battery-housings"
+      },
+      {
+        "name": "Electronics enclosures",
+        "text": "Sealed housings made around a specific circuit board.",
+        "img": "prod-enclosures"
+      },
+      {
+        "name": "Field ration trays",
+        "text": "Compartment trays sized to a ration pack's contents.",
+        "img": "prod-ration-trays"
+      }
+    ]
+  },
+  {
+    "slug": "hospitality-catering",
+    "name": "Hospitality and catering",
+    "seo_title": "Plastic Trays, Tableware and Drinkware for Catering | Ertone",
+    "card_name": "Hospitality",
+    "short": "Mugs, glasses and cutlery built to survive busy kitchens, dishwashers and daily service.",
+    "hero_line": "Trays, tableware and reusable drinkware built for busy kitchens, dishwashers and daily service.",
+    "meta_description": "Plastic serving trays, food containers, tableware and reusable drinkware, including polycarbonate pints and polypropylene flutes, made in the UK by Ertone Plastics.",
+    "overview_title": "Built for daily service.",
+    "overview": [
+      "We make durable, hygienic plastic products for the UK catering and hospitality industry, from serving trays and food containers to tableware and drinkware.",
+      "Our reusable drinkware includes polycarbonate pints and polypropylene champagne flutes, and products can be customised with your logo or branding. Used cups and glasses can come back through our closed loop recycling system and be moulded into new products."
+    ],
+    "trio_title": "Durable. Hygienic. Reusable.",
+    "trio": [
+      {
+        "title": "Durable",
+        "text": "Built to survive busy service and the dishwasher."
+      },
+      {
+        "title": "Hygienic",
+        "text": "Food safe plastics that are easy to clean."
+      },
+      {
+        "title": "Reusable",
+        "text": "Reusable drinkware that cuts single use waste."
+      }
+    ],
+    "facts": [
+      [
+        "Typical parts",
+        "Trays, food containers, tableware, drinkware"
+      ],
+      [
+        "Drinkware",
+        "Polycarbonate pints, polypropylene flutes"
+      ],
+      [
+        "Branding",
+        "Printed with your logo"
+      ],
+      [
+        "Recycling",
+        "Closed loop take back"
+      ]
+    ],
+    "faq_noun": "hospitality and catering",
+    "related": [
+      "injection-moulding",
+      "secondary-operations",
+      "closed-loop-recycling"
+    ],
+    "img": {
+      "hero": "news-thermosetting",
+      "overview": "card-hospitality",
+      "card": "card-hospitality"
+    },
+    "designed": false,
+    "products_label": "Example parts",
+    "products_title": "Hospitality products we can mould.",
+    "products": [
+      {
+        "name": "Polycarbonate pints",
+        "text": "Shatterproof pints from our own range, printed with your logo.",
+        "img": "prod-pints"
+      },
+      {
+        "name": "Champagne flutes",
+        "text": "Reusable polypropylene flutes from our own range.",
+        "img": "prod-flutes"
+      },
+      {
+        "name": "Venue serving trays",
+        "text": "Trays moulded in a venue's colours with its own emblem.",
+        "img": "prod-serving-trays"
+      }
+    ]
+  }
+]

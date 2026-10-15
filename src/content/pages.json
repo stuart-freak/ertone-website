@@ -1,0 +1,255 @@
+{
+  "home": {
+    "title": "Ertone | UK Injection Moulding Company Since 1982",
+    "description": "UK injection moulding company in Aylesbury since 1982. Precision plastic parts on 100 - 600 tonne presses, from design and tooling to production, assembly and closed loop recycling.",
+    "hero_l1": "Injection moulding.",
+    "hero_l2": "UK based since 1982.",
+    "hero_eyebrow": "ISO 9001 certified plastic engineering",
+    "hero_mobile_text": "Our core discipline. Production on 100 - 600 tonne presses, from small precision components to large structural mouldings, held to drawing run after run.",
+    "stats": [
+      {
+        "label": "Clamp force",
+        "value": "100 - 600t"
+      },
+      {
+        "label": "Volume",
+        "value": "Low to high",
+        "mobile_only": true
+      },
+      {
+        "label": "In operation since",
+        "value": "1982"
+      },
+      {
+        "label": "Scope",
+        "value": "Concept → production"
+      }
+    ],
+    "capabilities_title": "One facility. Every stage of the part.",
+    "capabilities": [
+      {
+        "service": "injection-moulding",
+        "title": "Injection moulding",
+        "text": "Our core discipline. Production on 100 - 600 tonne presses, from small precision components to large structural mouldings, held to drawing run after run."
+      },
+      {
+        "service": "tool-manufacture",
+        "title": "Tool manufacture",
+        "text": "Production tools designed, built and trialled. Or move your existing tool to Ertone and get it back into production."
+      },
+      {
+        "service": "design-prototype",
+        "title": "Design and prototyping",
+        "text": "Test the idea early. We design, refine and prototype so the final part works first time."
+      },
+      {
+        "service": "secondary-operations",
+        "title": "Secondary operations",
+        "text": "Print, weld, assemble, pack and dispatch, all under one roof in Aylesbury."
+      }
+    ],
+    "process_text": "One team owns your part throughout, with no handovers between design house, toolmaker and moulder.",
+    "banner_title": "Smart plastics for a circular future",
+    "banner_text": "Every part we make is a chance to waste less. See how our closed loop system keeps plastic in use.",
+    "banner_cta": "See how it works"
+  },
+  "services": {
+    "title": "Injection Moulding and Plastic Services | Ertone",
+    "description": "Injection moulding, tool manufacture, design and prototyping, secondary operations and closed loop recycling from Ertone Plastics in Aylesbury, plus vacuum forming and fabrication.",
+    "hero_title": "Services",
+    "hero_text": "Injection moulding, tooling, design and finishing. Four decades of UK production under one roof.",
+    "numbers_title": "The work in numbers.",
+    "numbers_text": "Four decades of UK production, from small precision components to large structural mouldings.",
+    "numbers": [
+      {
+        "value": "40+",
+        "label": "Years of experience",
+        "text": "UK production since 1982."
+      },
+      {
+        "value": "600t",
+        "label": "Maximum clamp force",
+        "text": "Presses from 100 to 600 tonnes."
+      },
+      {
+        "value": "4kg",
+        "label": "Largest part weight",
+        "text": "Parts from 1 gram up to 4 kilograms."
+      },
+      {
+        "value": "30+",
+        "label": "Years supplying UK airlines",
+        "text": "Drawers, trays, bins and more."
+      }
+    ]
+  },
+  "sectors": {
+    "title": "Sectors We Mould For | Ertone",
+    "description": "Injection moulded parts for aerospace and airlines, construction, automation, sport, defence and hospitality, made in the UK by Ertone Plastics since 1982.",
+    "hero_title": "Sectors",
+    "hero_text": "Parts for airlines, building sites, automated lines, sport, defence and hospitality. Made in the UK since 1982.",
+    "faqs": [
+      {
+        "q": "Which sectors does Ertone work in?",
+        "a": "Our biggest sectors are airlines, construction and hospitality. We also make parts for automation, sport, defence, energy, electrical and packaging customers."
+      },
+      {
+        "q": "Do you hold ISO 9001 certification?",
+        "a": "Yes. Ertone is ISO 9001 certified, and the certificate is available on the downloads page."
+      },
+      {
+        "q": "Can you support low volume runs and prototypes?",
+        "a": "Yes. We can supply prototype parts before tooling, then run low or high volumes from the production tool."
+      },
+      {
+        "q": "What does the quote process involve?",
+        "a": "Send a drawing, a sample or an idea. An engineer reviews it, then we send a quote with material and tooling recommendations."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Ertone | UK Injection Moulders Since 1982",
+    "description": "Ertone Plastics has designed and manufactured precision injection moulded plastic components in the UK since 1982. ISO 9001 certified, based in Aylesbury.",
+    "hero_title": "About",
+    "hero_text": "UK injection moulders, in operation since 1982.",
+    "story_title": "Built in the UK since 1982.",
+    "story": [
+      "Established in 1982, Ertone Plastics has built a strong reputation as a quality designer and manufacturer of precision injection moulded plastic components.",
+      "Everything from airline trolley trays, plastic jugs and glasses through to first aid boxes, cutlery and receptacles of almost any shape and size. We have supplied some of the world's largest and most demanding companies for decades, always upholding the Ertone standard of quality."
+    ],
+    "stats": [
+      {
+        "value": "1982",
+        "label": "In operation since",
+        "text": "Four decades of UK production."
+      },
+      {
+        "value": "30+",
+        "label": "Years supplying UK airlines",
+        "text": "Drawers, trays, bins and more."
+      },
+      {
+        "value": "100 - 600t",
+        "label": "Clamp force range",
+        "text": "Small precision parts to large structural mouldings."
+      }
+    ],
+    "how_title": "One team from drawing to dispatch.",
+    "how": [
+      {
+        "title": "Engineer led",
+        "text": "Every enquiry is reviewed by an engineer, whether it arrives as a drawing, a sample or a concept."
+      },
+      {
+        "title": "One facility",
+        "text": "Design, tooling, moulding and finishing under one roof, with no handovers between suppliers."
+      },
+      {
+        "title": "Repeat production",
+        "text": "Parts held to drawing run after run, from low to high volume."
+      }
+    ],
+    "quality": {
+      "label": "Quality",
+      "title": "ISO 9001 certified.",
+      "text": "Certified plastic engineering, with the ISO 9001 certificate available to download.",
+      "cta": "View certificate",
+      "href": "/downloads"
+    },
+    "sustainability": {
+      "label": "Sustainability",
+      "title": "Closed loop recycling.",
+      "text": "Every part we make is a chance to waste less. See how our closed loop system keeps plastic in use.",
+      "cta": "See how it works",
+      "href": "/services/closed-loop-recycling"
+    },
+    "team_title": "The people behind the parts.",
+    "team": [
+      {
+        "name": "Saul O'Neil",
+        "role": "Head of Business Development",
+        "img": "team-saul"
+      },
+      {
+        "name": "Jon Hall",
+        "role": "Commercial Director",
+        "img": "team-john"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Ertone | Talk to an Engineer",
+    "description": "Contact Ertone Plastics in Aylesbury. Call 01296 431482 or email enquiries@ertoneplastics.co.uk to talk to an engineer about your part, tool or production run.",
+    "hero_title": "Contact",
+    "hero_text": "Talk to an engineer about your part, your tool or your next production run.",
+    "form_title": "Talk to an engineer.",
+    "form_text": "Every enquiry goes to someone who can answer it, from tooling questions to repeat orders.",
+    "next": [
+      {
+        "title": "Start a project",
+        "text": "Send a drawing, sample or concept for engineer review.",
+        "cta": "Request a quote",
+        "href": "/quote"
+      },
+      {
+        "title": "Downloads",
+        "text": "Company brochure, ISO 9001 certificate and terms and conditions.",
+        "cta": "View downloads",
+        "href": "/downloads"
+      },
+      {
+        "title": "Our services",
+        "text": "From injection moulding and tooling to design and finishing.",
+        "cta": "View services",
+        "href": "/services"
+      }
+    ]
+  },
+  "news": {
+    "title": "News and Guides | Ertone",
+    "description": "Guides to injection moulding costs, materials, process and quality, plus project and company news from Ertone Plastics.",
+    "hero_title": "News",
+    "hero_text": "Guides, projects and updates from the team at Ertone.",
+    "grid_title": "Latest from the team.",
+    "newsletter_title": "Get the next update.",
+    "newsletter_text": "Project stories and company news from Ertone, straight to your inbox."
+  },
+  "downloads": {
+    "title": "Downloads | Ertone",
+    "description": "Download the Ertone company brochure, ISO 9001 certificate and terms and conditions of sale.",
+    "hero_title": "Downloads",
+    "hero_text": "Our brochure, certificates and terms, ready to download.",
+    "items": [
+      {
+        "title": "Company brochure",
+        "text": "What we make, how we work and the sectors we serve.",
+        "file": "",
+        "type": "PDF",
+        "status": "Coming soon"
+      },
+      {
+        "title": "ISO 9001 certificate",
+        "text": "Our current ISO 9001 quality management certificate.",
+        "file": "/downloads/ertone-iso-9001-certificate.pdf",
+        "type": "PDF"
+      },
+      {
+        "title": "Terms and conditions",
+        "text": "Ertone Plastics terms and conditions of sale.",
+        "file": "/downloads/ertone-terms-and-conditions.docx",
+        "type": "Word"
+      }
+    ]
+  },
+  "quote": {
+    "title": "Request a Quote | Ertone",
+    "description": "Send a drawing, sample or idea and an Ertone engineer will review it and come back with an injection moulding quote you can plan around.",
+    "hero_title": "Request a quote",
+    "hero_text": "Send a drawing, sample or idea and an engineer will come back with a quote you can plan around."
+  },
+  "thanks": {
+    "title": "Thank You | Ertone",
+    "heading": "Thanks. We have your enquiry.",
+    "text": "An engineer will review it and get back to you soon. If it is urgent, call us on"
+  }
+}

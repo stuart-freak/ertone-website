@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+{{ m.hero('hero-about-factory', page.hero_title, page.hero_text, None, [{'label': 'Start a project', 'href': '/quote', 'arrow': true}, {'label': 'Contact the team', 'href': '/contact', 'cls': 'btn--ghost'}]) }}
+
+<section class="section">
+  <div class="wrap split">
+    <div class="split__text">
+      <div class="heading-group">
+        {{ m.eyebrow(1, 'Our story') }}
+        <h2 class="h2">{{ page.story_title }}</h2>
+      </div>
+      <div class="prose body">{% for p in page.story %}<p>{{ p }}</p>{% endfor %}</div>
+    </div>
+    <div class="split__img">{{ img('ov-about', '(max-width: 900px) 100vw, 55vw', '', 'Moulded plastic parts being checked at the Ertone factory in Aylesbury') }}</div>
+  </div>
+  <div class="wrap" style="margin-top: clamp(48px, 5.6vw, 80px)">
+    <div class="stat-row">
+      {% for st in page.stats %}
+      <div><p class="stat-row__value">{{ st.value }}</p><p class="stat-row__label">{{ st.label }}</p><p class="stat-row__text">{{ st.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(2, 'How we work') }}
+      <h2 class="h2">{{ page.how_title }}</h2>
+    </div>
+    {{ m.lcards(page.how) }}
+  </div>
+</section>
+
+<section class="section section--tight-top">
+  <div class="wrap">
+    {{ m.eyebrow(3, 'Quality and sustainability') }}
+    <div class="duo">
+      {% for p in [page.quality, page.sustainability] %}
+      <div class="duo__panel">
+        <p class="eyebrow">{{ p.label }}</p>
+        <h3 class="duo__title">{{ p.title }}</h3>
+        <p class="muted">{{ p.text }}</p>
+        <a class="link-mono" href="{{ u(p.href) }}">{{ p.cta }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(4, 'The team') }}
+      <h2 class="h2">{{ page.team_title }}</h2>
+    </div>
+    <div class="team">
+      {% for p in page.team %}
+      <div class="person">
+        <div class="person__img">{{ img(p.img, '(max-width: 700px) 100vw, (max-width: 1180px) 50vw, 25vw', '', p.name) }}</div>
+        <p class="person__name">{{ p.name }}</p>
+        <p class="person__role">{{ p.role }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ m.banner(pages_home.banner_title, pages_home.banner_text, pages_home.banner_cta, '/services/closed-loop-recycling') }}
+{% endblock %}

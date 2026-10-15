@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="wrap notice">
+  <p class="eyebrow">Enquiry received</p>
+  <h1 class="h2 h2--xl">{{ page.heading }}</h1>
+  <p class="lead muted" style="max-width:640px">{{ page.text }} <a href="{{ tel(site.phone) }}" style="color:var(--text)">{{ site.phone }}</a>.</p>
+  <div class="btns">
+    <a class="btn btn--mint" href="{{ u('/') }}">Back to home</a>
+    <a class="btn btn--ghost" href="{{ u('/news') }}">Read our guides</a>
+  </div>
+</section>
+<script>try{var k=sessionStorage.getItem("ertone_sent");if(k){sessionStorage.removeItem("ertone_sent");window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:"enquiry_submitted",form_type:k});}}catch(e){}</script>
+{% endblock %}

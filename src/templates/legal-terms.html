@@ -1,0 +1,26 @@
+{% extends "_legal.html" %}
+{% block legal %}
+<p>These terms apply to your use of this website, which is run by {{ site.legal_name }}, a company registered in England and Wales (company number {{ site.company_number }}) at {{ site.address_one_line }}.</p>
+<p>Our terms and conditions of sale, which apply to quotes and orders, are separate and can be found on our <a href="{{ u('/downloads') }}">downloads page</a>.</p>
+
+<h2>Using this site</h2>
+<p>You may use this site to learn about our services and to contact us. Please do not misuse it, for example by trying to gain unauthorised access, introducing malicious code or sending enquiries in someone else's name.</p>
+
+<h2>Information on this site</h2>
+<p>We work to keep the information on this site accurate and up to date, but it is general information and not a quote or a technical specification. Any order is governed by your quote and our terms and conditions of sale.</p>
+
+<h2>Intellectual property</h2>
+<p>The content of this site, including text, images and the Ertone name and logo, belongs to {{ site.legal_name }} or is used with permission. You may view and print pages for your own use, but please do not copy or reuse the content without our permission.</p>
+
+<h2>Links to other sites</h2>
+<p>Links to other websites are provided for convenience. We are not responsible for the content of those sites.</p>
+
+<h2>Liability</h2>
+<p>We do not exclude liability where it would be unlawful to do so. Otherwise, we are not liable for any loss arising from your use of this site or reliance on its content.</p>
+
+<h2>Law</h2>
+<p>These terms are governed by the law of England and Wales, and the courts of England and Wales have jurisdiction.</p>
+
+<h2>Contact</h2>
+<p>Questions about these terms can be sent to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+{% endblock %}

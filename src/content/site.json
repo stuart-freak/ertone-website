@@ -1,0 +1,156 @@
+{
+  "_note": "Site wide settings read by src/build.py. Leave a value empty to hide it on the site. Values marked TODO in docs/LAUNCH.md still need confirming with Ertone.",
+  "name": "Ertone",
+  "legal_name": "Ertone Plastics Ltd",
+  "company_number": "01677534",
+  "founded": "1982",
+  "url": "https://ertone.co.uk",
+  "phone": "01296 431482",
+  "phone_e164": "+441296431482",
+  "email": "enquiries@ertoneplastics.co.uk",
+  "address_lines": [
+    "Unit 3 Telford Close",
+    "Aylesbury",
+    "Buckinghamshire",
+    "HP19 8DS"
+  ],
+  "address_one_line": "Unit 3 Telford Close, Aylesbury, Buckinghamshire HP19 8DS",
+  "maps_url": "https://www.google.com/maps/dir/?api=1&destination=Ertone+Plastics+Ltd%2C+Unit+3+Telford+Close%2C+Aylesbury+HP19+8DS",
+  "opening_hours": "8am - 8pm",
+  "linkedin": "https://www.linkedin.com/company/ertone-plastics-limited/",
+  "description": "UK injection moulding company in Aylesbury since 1982. Precision moulded plastic parts on 100 - 600 tonne presses, from design and tooling to volume production, assembly and closed loop recycling.",
+  "certifications": [
+    "ISO 9001 certified"
+  ],
+  "gtm_id": "",
+  "google_site_verification": "",
+  "bing_site_verification": "",
+  "turnstile_site_key": "",
+  "nav": [
+    {
+      "label": "Services",
+      "href": "/services",
+      "menu": "services"
+    },
+    {
+      "label": "Sectors",
+      "href": "/sectors",
+      "menu": "sectors"
+    },
+    {
+      "label": "News",
+      "href": "/news"
+    },
+    {
+      "label": "Downloads",
+      "href": "/downloads"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "industries": [
+    {
+      "label": "Airline",
+      "sector": "aerospace"
+    },
+    {
+      "label": "Energy"
+    },
+    {
+      "label": "Construction",
+      "sector": "construction"
+    },
+    {
+      "label": "Automation",
+      "sector": "automation"
+    },
+    {
+      "label": "Automotive"
+    },
+    {
+      "label": "Electrical"
+    },
+    {
+      "label": "Defence",
+      "sector": "defence"
+    },
+    {
+      "label": "Sports",
+      "sector": "sports"
+    },
+    {
+      "label": "Packaging"
+    },
+    {
+      "label": "Waste management"
+    },
+    {
+      "label": "Hospitality and catering",
+      "sector": "hospitality-catering"
+    }
+  ],
+  "process": [
+    {
+      "title": "Engineer review",
+      "text": "Drawing, sample or concept reviewed by an engineer.",
+      "icon": "review"
+    },
+    {
+      "title": "Quote submission",
+      "text": "DFM, material selection and prototype parts.",
+      "icon": "quote"
+    },
+    {
+      "title": "Production",
+      "text": "Production tool designed, built and trialled.",
+      "icon": "production"
+    },
+    {
+      "title": "Finish",
+      "text": "Print, weld, assemble, pack and dispatch.",
+      "icon": "finish"
+    }
+  ],
+  "quote_steps": [
+    "An engineer reviews your drawing, sample or concept.",
+    "Your quote comes with DFM and material selection.",
+    "Prototype parts, then a production tool designed, built and trialled."
+  ],
+  "volumes": [
+    "Prototype or sample",
+    "Low volume",
+    "Medium volume",
+    "High volume",
+    "Not sure yet"
+  ],
+  "enquiry_types": [
+    "Request a quote",
+    "Tool transfer",
+    "Closed loop recycling",
+    "General enquiry"
+  ],
+  "faqs_moulding": [
+    {
+      "q": "What materials can Ertone injection mould?",
+      "a": "Mainly polycarbonate (PC), polypropylene (PP), polystyrene (GPPS), ABS and nylon (PA), including high quality clear parts. Tell us how the part will be used and we will recommend the right polymer."
+    },
+    {
+      "q": "How long does it take to produce a new mould tool?",
+      "a": "It depends on the size and complexity of the part and the tool. Your quote sets out the tooling lead time, and if you already have a tool we can move it to Ertone instead."
+    },
+    {
+      "q": "What size components can you produce?",
+      "a": "Parts from 1 gram up to 4 kilograms, on presses from 100 to 600 tonnes. That covers small precision components through to large structural mouldings."
+    },
+    {
+      "q": "What does the Ertone injection moulding service include?",
+      "a": "Design and material advice, tool making or tool transfer, sampling and trials, volume production, then printing, welding, assembly, packing and delivery. One team looks after your part from drawing to dispatch."
+    }
+  ]
+}

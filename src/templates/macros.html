@@ -1,0 +1,247 @@
+{% macro eyebrow(num, label, dark=false) %}<p class="eyebrow{% if dark %} eyebrow--dark{% endif %}">{{ '%02d' % num }} / {{ label }}</p>{% endmacro %}
+
+{% macro arrow() %}<span class="arrow" aria-hidden="true">→</span>{% endmacro %}
+
+{% macro hero(image, title, text, crumbs=None, buttons=None, cls='hero--page', h1cls='', alt='') %}
+<section class="hero {{ cls }}">
+  {{ img(image, '100vw', 'hero__img', alt, eager=true, fetch_high=true) }}
+  <div class="wrap hero__inner">
+    {% if crumbs %}<nav class="crumbs" aria-label="Breadcrumb">{% for name, href in crumbs %}{% if href %}<a href="{{ u(href) }}">{{ name }}</a>{% else %}<span aria-current="page">{{ name }}</span>{% endif %}{% if not loop.last %} / {% endif %}{% endfor %}</nav>{% endif %}
+    <h1 class="h1 {{ h1cls }}">{{ title }}</h1>
+    {% if text %}<p class="lead hero__text">{{ text }}</p>{% endif %}
+    {% if buttons %}<div class="btns">{% for b in buttons %}<a class="btn {{ b.cls|default('btn--mint') }}" href="{{ u(b.href) }}">{{ b.label }}{% if b.arrow %} {{ arrow() }}{% endif %}</a>{% endfor %}</div>{% endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{% macro card(href, image, title, text, cta='View more', sizes='(max-width: 700px) 100vw, (max-width: 1180px) 50vw, 33vw') %}
+<a class="card" href="{{ u(href) }}">
+  <div class="card__img">{{ img(image, sizes, '', '') }}</div>
+  <h3 class="card__title">{{ title }}</h3>
+  <p class="card__text">{{ text }}</p>
+  <span class="link-mono">{{ cta }}</span>
+</a>
+{% endmacro %}
+
+{% macro carousel(items, label) %}
+<div class="carousel" role="region" aria-label="{{ label }}">
+  <div class="carousel__track">
+    {% for it in items %}{{ card(it.href, it.img, it.title, it.text, it.cta|default('View more')) }}{% endfor %}
+  </div>
+  <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous">{{ icon('arrowbtn') }}</button>
+  <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next">{{ icon('arrowbtn') }}</button>
+</div>
+{% endmacro %}
+
+{% macro process(num, title='A single engineering thread from drawing to dispatch.', text=None, divided=false, icons=false) %}
+<section class="band-light section">
+  <div class="wrap">
+    <div class="process__head">
+      <div class="heading-group">
+        {{ eyebrow(num, 'Process', dark=true) }}
+        <h2 class="h2">{{ title }}</h2>
+      </div>
+      {% if text %}<p>{{ text }}</p>{% endif %}
+    </div>
+    <ol class="flow">
+      {% for st in site.process %}
+      <li class="flow__step">
+        <span class="flow__node">{{ icon(st.icon) }}</span>
+        <span class="step__num">Step {{ '%02d' % loop.index }}</span>
+        <h3 class="step__title">{{ st.title }}</h3>
+        <p class="step__text">{{ st.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro industries(num, active=None, title='Industries we serve.') %}
+<section class="section">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ eyebrow(num, 'Industries') }}
+      <h2 class="h2">{{ title }}</h2>
+    </div>
+    <ul class="chips">
+      {% for ind in site.industries %}
+      <li>{% if ind.sector %}<a class="chip{% if ind.sector == active %} is-active{% endif %}" href="{{ u('/sectors/' ~ ind.sector) }}"{% if ind.sector == active %} aria-current="page"{% endif %}>{{ ind.label }}</a>{% else %}<span class="chip">{{ ind.label }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro related(num, title, slugs, label='Related services') %}
+<section class="section">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ eyebrow(num, label) }}
+      <h2 class="h2">{{ title }}</h2>
+    </div>
+    <div class="lcards">
+      {% for slug in slugs %}{% set s = svc_by[slug] %}
+      <a class="lcard" href="{{ u('/services/' ~ slug) }}">
+        <span class="lcard__num">{{ '%02d' % loop.index }}</span>
+        <h3 class="lcard__title">{{ s.name }}</h3>
+        <p class="lcard__text">{{ s.short }}</p>
+        <span class="link-mono">View service</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro lcards(items) %}
+<div class="highlights">
+  {% for it in items %}
+  <div class="highlight">
+    <span class="highlight__icon">{{ icon(it.icon or hl_icon(it.title)) }}</span>
+    <h3 class="highlight__title">{{ it.title }}</h3>
+    <p class="highlight__text">{{ it.text }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro facts_panel(num, title, facts, label='At a glance', tight=true) %}
+<section class="section{% if tight %} section--tight-top{% endif %}">
+  <div class="wrap">
+    <div class="facts-panel">
+      <div class="heading-group">
+        {{ eyebrow(num, label) }}
+        <h2 class="h2">{{ title }}</h2>
+      </div>
+      <dl class="facts">
+        {% for k, v in facts %}<div class="fact"><dt>{{ k }}</dt><dd>{{ v }}</dd></div>{% endfor %}
+      </dl>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro faq(num, title, faqs, plain=false, label='Questions') %}
+<section class="section">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ eyebrow(num, label) }}
+      <h2 class="h2">{{ title }}</h2>
+    </div>
+    <div class="faq{% if plain %} faq--plain{% endif %}" data-exclusive>
+      {% for f in faqs %}
+      <details class="faq__item"{% if loop.first %} open{% endif %}>
+        <summary>{% if not plain %}<span class="faq__num">{{ '%02d' % loop.index }}</span>{% endif %}<h3 class="faq__q">{{ f.q }}</h3><span class="faq__sign" aria-hidden="true"></span></summary>
+        <p class="faq__a">{{ f.a }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro cta(title='Have a part in mind?') %}
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="cta-panel">
+      <h2 class="h2">{{ title }}</h2>
+      <div class="btns">
+        <a class="btn btn--mint" href="{{ u('/quote') }}">Start a project {{ arrow() }}</a>
+        <a class="btn btn--ghost" href="{{ u('/contact') }}">Contact the team</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro banner(title, text, cta_label, href, image='banner-circular') %}
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="banner">
+      {{ img(image, '(max-width: 1440px) 100vw, 1380px', '', '') }}
+      <div class="banner__inner">
+        <h2 class="banner__title">{{ title }}</h2>
+        <p class="banner__text">{{ text }}</p>
+        <div class="btns"><a class="btn btn--mint" href="{{ u(href) }}">{{ cta_label }} {{ arrow() }}</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro turnstile() %}{% if site.turnstile_site_key and not preview %}<div class="field field--full"><div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}" data-theme="dark" data-size="flexible"></div></div>{% endif %}{% endmacro %}
+
+{% macro hp() %}
+<div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+{% endmacro %}
+
+{% macro quote_form(id, service=None) %}
+<form class="form" data-form="quote" novalidate>
+  <div class="field"><label for="{{ id }}-name">Name</label><input class="input" id="{{ id }}-name" name="name" type="text" required placeholder="Your name" autocomplete="name"><span class="field__error" role="alert"></span></div>
+  <div class="field"><label for="{{ id }}-company">Company</label><input class="input" id="{{ id }}-company" name="company" type="text" placeholder="Company" autocomplete="organization"><span class="field__error" role="alert"></span></div>
+  <div class="field"><label for="{{ id }}-email">Email</label><input class="input" id="{{ id }}-email" name="email" type="email" required placeholder="name@company.co.uk" autocomplete="email"><span class="field__error" role="alert"></span></div>
+  <div class="field"><label for="{{ id }}-phone">Phone</label><input class="input" id="{{ id }}-phone" name="phone" type="tel" placeholder="Phone number" autocomplete="tel"><span class="field__error" role="alert"></span></div>
+  <div class="field"><label for="{{ id }}-service">Service</label>
+    <select class="input" id="{{ id }}-service" name="service">
+      {% for s in services %}<option value="{{ s.name }}" data-slug="{{ s.slug }}"{% if s.slug == service %} selected{% endif %}>{{ s.name }}</option>{% endfor %}
+      <option value="Not sure yet">Not sure yet</option>
+    </select><span class="field__error" role="alert"></span></div>
+  <div class="field"><label for="{{ id }}-volume">Volume</label>
+    <select class="input" id="{{ id }}-volume" name="volume">
+      {% for v in site.volumes %}<option value="{{ v }}">{{ v }}</option>{% endfor %}
+    </select><span class="field__error" role="alert"></span></div>
+  <div class="field field--full"><label for="{{ id }}-message">About the project</label><textarea class="input" id="{{ id }}-message" name="message" required placeholder="Part, material, quantity and any deadlines"></textarea><span class="field__error" role="alert"></span></div>
+  <div class="field field--full"><span class="label" id="{{ id }}-file-label">Drawing or sample <span class="opt">(optional, up to 50MB)</span></span>
+    <label class="file"><span class="file__name" data-empty="Attach a drawing, sample photo or sketch">Attach a drawing, sample photo or sketch</span><span class="file__browse">Browse</span><input type="file" name="drawing" aria-labelledby="{{ id }}-file-label" accept=".pdf,.dwg,.dxf,.step,.stp,.iges,.igs,.stl,.x_t,.sldprt,.jpg,.jpeg,.png,.heic,.zip"></label>
+    <span class="field__error" role="alert"></span></div>
+  {{ turnstile() }}
+  {{ hp() }}
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="form__status" role="status" aria-live="polite"></div>
+  <div class="form__foot">
+    <button class="btn btn--mint" type="submit">Request a quote {{ arrow() }}</button>
+    <p class="form__note">We use your details to reply to this enquiry. See our <a href="{{ u('/privacy') }}">privacy policy</a>.</p>
+  </div>
+</form>
+{% endmacro %}
+
+{% macro contact_form(id) %}
+<form class="form" data-form="contact" novalidate>
+  <div class="field"><label for="{{ id }}-name">Name</label><input class="input" id="{{ id }}-name" name="name" type="text" required placeholder="Your name" autocomplete="name"><span class="field__error" role="alert"></span></div>
+  <div class="field"><label for="{{ id }}-company">Company</label><input class="input" id="{{ id }}-company" name="company" type="text" placeholder="Company" autocomplete="organization"><span class="field__error" role="alert"></span></div>
+  <div class="field"><label for="{{ id }}-email">Email</label><input class="input" id="{{ id }}-email" name="email" type="email" required placeholder="name@company.co.uk" autocomplete="email"><span class="field__error" role="alert"></span></div>
+  <div class="field"><label for="{{ id }}-phone">Phone</label><input class="input" id="{{ id }}-phone" name="phone" type="tel" placeholder="Phone number" autocomplete="tel"><span class="field__error" role="alert"></span></div>
+  <div class="field field--full"><label for="{{ id }}-type">Enquiry type</label>
+    <select class="input" id="{{ id }}-type" name="enquiry_type">
+      {% for t in site.enquiry_types %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
+    </select><span class="field__error" role="alert"></span></div>
+  <div class="field field--full"><label for="{{ id }}-message">Message</label><textarea class="input" id="{{ id }}-message" name="message" required placeholder="Tell us about the part, quantity or question"></textarea><span class="field__error" role="alert"></span></div>
+  {{ turnstile() }}
+  {{ hp() }}
+  <div class="form__status" role="status" aria-live="polite"></div>
+  <div class="form__foot">
+    <button class="btn btn--mint" type="submit">Send message {{ arrow() }}</button>
+    <p class="form__note">We use your details to reply to this enquiry. See our <a href="{{ u('/privacy') }}">privacy policy</a>.</p>
+  </div>
+</form>
+{% endmacro %}
+
+{% macro quote_panel(num, id='q', service=None, title="Let's talk about your part.", h1=false) %}
+<section class="section{% if not h1 %} section--tight-top{% endif %}" id="quote">
+  <div class="wrap">
+    <div class="quote">
+      <div class="quote__intro">
+        {% if num %}{{ eyebrow(num, 'Get a quote') }}{% endif %}
+        <h2 class="h2">{{ title }}</h2>
+        <p class="muted">Every enquiry is reviewed by an engineer. Tell us what you need moulded and we will come back with a quote you can plan around.</p>
+        <ol class="qsteps">
+          {% for st in site.quote_steps %}<li><span>{{ '%02d' % loop.index }}</span>{{ st }}</li>{% endfor %}
+        </ol>
+        <p class="quote__call">Prefer to talk it through? Call <a href="{{ tel(site.phone) }}">{{ site.phone }}</a> or email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+      </div>
+      {{ quote_form(id, service) }}
+    </div>
+  </div>
+</section>
+{% endmacro %}

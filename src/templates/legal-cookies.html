@@ -1,0 +1,22 @@
+{% extends "_legal.html" %}
+{% block legal %}
+<p>Cookies are small files that a website stores in your browser. This page explains what this site stores and how to change your choice.</p>
+
+<h2>Essential storage</h2>
+<p>These are needed for the site to work and are always on.</p>
+<ul>
+  <li><strong>ertone_consent</strong> remembers your cookie choice so we do not ask on every page. It is kept in your browser until you clear it.</li>
+  <li><strong>ertone_utm</strong> remembers which campaign brought you to the site during your visit, so it can be included if you send an enquiry. It is deleted when you close the browser tab.</li>
+</ul>
+
+<h2>Analytics and advertising cookies</h2>
+<p>These are only set if you choose Accept all. We use Google Analytics to understand how people use the site, and Google Ads to measure which adverts lead to enquiries. Both are loaded through Google Tag Manager. Typical cookies include _ga, _ga_* and _gcl_au, and they last up to two years.</p>
+<p>If you choose Essential only, Google tags run in a restricted mode that does not set these cookies.</p>
+
+<h2>Changing your choice</h2>
+<p>You can change your choice at any time. <button type="button" class="link-mono" data-cookie-settings style="background:none;border:0;padding:0;cursor:pointer">Open cookie settings</button></p>
+<p>You can also delete cookies through your browser settings.</p>
+
+<h2>More information</h2>
+<p>See our <a href="{{ u('/privacy') }}">privacy policy</a> for how we use personal information, or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> with any questions.</p>
+{% endblock %}

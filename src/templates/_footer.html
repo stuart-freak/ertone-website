@@ -1,0 +1,42 @@
+<footer class="footer">
+  <div class="wrap">
+    <a class="footer__logo" href="{{ u('/') }}" aria-label="Ertone home">{{ icon('wordmark') }}</a>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <address class="footer__addr">{{ site.legal_name }}<br>{% for l in site.address_lines %}{{ l }}<br>{% endfor %}United Kingdom</address>
+        <div class="footer__icons">
+          <a href="{{ site.linkedin }}" aria-label="Ertone on LinkedIn" rel="noopener" target="_blank">{{ icon('linkedin') }}</a>
+          <a href="mailto:{{ site.email }}" aria-label="Email {{ site.email }}">{{ icon('at') }}</a>
+          <a href="{{ tel(site.phone) }}" aria-label="Call {{ site.phone }}">{{ icon('phone') }}</a>
+          <a href="{{ site.maps_url }}" aria-label="Directions to Ertone" rel="noopener" target="_blank">{{ icon('pin') }}</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__head">Capabilities</div>
+        {% for slug in ['injection-moulding', 'tool-manufacture', 'design-prototype', 'secondary-operations', 'closed-loop-recycling'] %}
+        <a href="{{ u('/services/' ~ slug) }}">{{ svc_by[slug].name }}</a>
+        {% endfor %}
+      </div>
+      <div class="footer__col">
+        <div class="footer__head">About us</div>
+        <a href="{{ u('/about') }}">About Ertone</a>
+        <a href="{{ u('/contact') }}">Contact</a>
+        <a href="{{ u('/quote') }}">Request a quote</a>
+        <a href="{{ u('/news') }}">News and guides</a>
+        <a href="{{ u('/downloads') }}">Downloads</a>
+        <a href="{{ site.linkedin }}" rel="noopener" target="_blank">LinkedIn</a>
+      </div>
+      <div class="footer__col">
+        <div class="footer__head">Legal</div>
+        <a href="{{ u('/privacy') }}">Privacy policy</a>
+        <a href="{{ u('/cookies') }}">Cookie policy</a>
+        <button type="button" data-cookie-settings>Cookie settings</button>
+        <a href="{{ u('/terms') }}">Website terms</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© {{ year }} {{ site.legal_name }}. Registered in England and Wales, company number {{ site.company_number }}.</p>
+      <div class="footer__badges"><span>ISO 9001 certified</span><span>Made in the UK since {{ site.founded }}</span></div>
+    </div>
+  </div>
+</footer>

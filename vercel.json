@@ -1,0 +1,296 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "echo The site is prebuilt into public by src/build.py",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/assets/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/downloads/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/thank-you",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/uk-injection-moulding-services",
+      "destination": "/sectors/aerospace",
+      "permanent": true
+    },
+    {
+      "source": "/injection-moulding-products",
+      "destination": "/sectors/hospitality-catering",
+      "permanent": true
+    },
+    {
+      "source": "/construction",
+      "destination": "/sectors/construction",
+      "permanent": true
+    },
+    {
+      "source": "/design-prototypes",
+      "destination": "/services/design-prototype",
+      "permanent": true
+    },
+    {
+      "source": "/injection-moulding-process",
+      "destination": "/services/injection-moulding",
+      "permanent": true
+    },
+    {
+      "source": "/injection-moulding",
+      "destination": "/services/injection-moulding",
+      "permanent": true
+    },
+    {
+      "source": "/closed-loop-recycling-system",
+      "destination": "/services/closed-loop-recycling",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/cookies",
+      "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/get-a-quote",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/request-a-quote",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/news/page/:n",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/sectors/airline",
+      "destination": "/sectors/aerospace",
+      "permanent": true
+    },
+    {
+      "source": "/sectors/hospitality",
+      "destination": "/sectors/hospitality-catering",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-thermosetting-plastic-properties-types-and-uses",
+      "destination": "/news/what-is-thermosetting-plastic-properties-types-and-uses",
+      "permanent": true
+    },
+    {
+      "source": "/how-much-does-plastic-injection-moulding-cost-in-the-uk",
+      "destination": "/news/how-much-does-plastic-injection-moulding-cost-in-the-uk",
+      "permanent": true
+    },
+    {
+      "source": "/the-role-of-quality-control-in-plastic-injection-moulding",
+      "destination": "/news/the-role-of-quality-control-in-plastic-injection-moulding",
+      "permanent": true
+    },
+    {
+      "source": "/injection-moulding-costs-explained-what-impacts-pricing-in-uk-manufacturing",
+      "destination": "/news/injection-moulding-costs-explained-what-impacts-pricing-in-uk-manufacturing",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-the-difference-between-thermoplastic-and-thermosetting-plastic",
+      "destination": "/news/what-is-the-difference-between-thermoplastic-and-thermosetting-plastic",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-reduce-costs-in-injection-moulding-without-compromising-quality",
+      "destination": "/news/how-to-reduce-costs-in-injection-moulding-without-compromising-quality",
+      "permanent": true
+    },
+    {
+      "source": "/from-concept-to-production-how-smart-tooling-reduces-costs-and-speeds-up-injection-moulding-projects",
+      "destination": "/news/from-concept-to-production-how-smart-tooling-reduces-costs-and-speeds-up-injection-moulding-projects",
+      "permanent": true
+    },
+    {
+      "source": "/future-materials-in-injection-moulding-how-bio-based-and-high-performance-polymers-are-changing-the-game",
+      "destination": "/news/future-materials-in-injection-moulding-how-bio-based-and-high-performance-polymers-are-changing-the-game",
+      "permanent": true
+    },
+    {
+      "source": "/how-do-you-choose-the-right-injection-moulding-company-in-the-uk",
+      "destination": "/news/how-do-you-choose-the-right-injection-moulding-company-in-the-uk",
+      "permanent": true
+    },
+    {
+      "source": "/what-are-the-4-stages-of-injection-moulding",
+      "destination": "/news/what-are-the-4-stages-of-injection-moulding",
+      "permanent": true
+    },
+    {
+      "source": "/what-are-the-advantages-and-disadvantages-of-injection-moulding-in-the-uk",
+      "destination": "/news/what-are-the-advantages-and-disadvantages-of-injection-moulding-in-the-uk",
+      "permanent": true
+    },
+    {
+      "source": "/understanding-the-injection-moulding-process-techniques-benefits-and-uk-applications",
+      "destination": "/news/understanding-the-injection-moulding-process-techniques-benefits-and-uk-applications",
+      "permanent": true
+    },
+    {
+      "source": "/what-are-injection-moulding-products-in-the-catering-industry",
+      "destination": "/news/what-are-injection-moulding-products-in-the-catering-industry",
+      "permanent": true
+    },
+    {
+      "source": "/common-challenges-in-injection-moulding-and-how-to-overcome-them",
+      "destination": "/news/common-challenges-in-injection-moulding-and-how-to-overcome-them",
+      "permanent": true
+    },
+    {
+      "source": "/how-is-precision-plastic-injection-moulding-used-in-airline-catering-solutions",
+      "destination": "/news/how-is-precision-plastic-injection-moulding-used-in-airline-catering-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/the-evolution-of-injection-moulding-how-ertone-plastics-sets-the-standard",
+      "destination": "/news/the-evolution-of-injection-moulding-how-ertone-plastics-sets-the-standard",
+      "permanent": true
+    },
+    {
+      "source": "/how-much-will-a-plastic-injection-mould-tool-cost",
+      "destination": "/news/how-much-will-a-plastic-injection-mould-tool-cost",
+      "permanent": true
+    },
+    {
+      "source": "/how-do-you-design-the-perfect-plastic-component",
+      "destination": "/news/how-do-you-design-the-perfect-plastic-component",
+      "permanent": true
+    },
+    {
+      "source": "/reusable-plastic-cups-for-bars",
+      "destination": "/news/reusable-plastic-cups-for-bars",
+      "permanent": true
+    },
+    {
+      "source": "/disposable-plastic-cups-for-festivals",
+      "destination": "/news/disposable-plastic-cups-for-festivals",
+      "permanent": true
+    }
+  ],
+  "installCommand": "npm install --omit=dev"
+}

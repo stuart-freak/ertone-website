@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+{{ m.hero('hero-contact', page.hero_title, page.hero_text, None, [{'label': 'Start a project', 'href': '/quote', 'arrow': true}, {'label': 'Call ' ~ site.phone, 'href': tel(site.phone), 'cls': 'btn--ghost'}], cls='hero--page hero--soft') }}
+
+<section class="section">
+  <div class="wrap contact">
+    <div class="contact__details">
+      <div class="heading-group">
+        {{ m.eyebrow(1, 'Get in touch') }}
+        <h2 class="h2">{{ page.form_title }}</h2>
+        <p class="muted">{{ page.form_text }}</p>
+      </div>
+      <div class="details">
+        <div class="detail"><span class="eyebrow">Phone</span><a class="detail__value" href="{{ tel(site.phone) }}">{{ site.phone }}</a></div>
+        <div class="detail"><span class="eyebrow">Email</span><a class="detail__value" href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+        <div class="detail"><span class="eyebrow">Address</span><address class="detail__value" style="font-style:normal">{{ site.address_one_line }}</address></div>
+        {% if site.opening_hours %}<div class="detail"><span class="eyebrow">Opening hours</span><span class="detail__value">{{ site.opening_hours }}</span></div>{% endif %}
+      </div>
+    </div>
+    <div class="form-panel">
+      {{ m.contact_form('c') }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="map">
+      {{ img('map', '100vw', '', 'Map showing Ertone Plastics on Telford Close, Aylesbury') }}
+      <div class="map__card">
+        <p class="eyebrow">Find us</p>
+        <p>{{ site.address_lines[0] }},<br>{{ site.address_lines[1] }} {{ site.address_lines[3] }}</p>
+        <a class="link-mono" href="{{ site.maps_url }}" rel="noopener" target="_blank">Get directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(2, 'Next steps') }}
+      <h2 class="h2">Not sure where to start?</h2>
+    </div>
+    <div class="lcards">
+      {% for n in page.next %}
+      <a class="lcard" href="{{ u(n.href) }}">
+        <span class="lcard__num">{{ '%02d' % loop.index }}</span>
+        <h3 class="lcard__title">{{ n.title }}</h3>
+        <p class="lcard__text">{{ n.text }}</p>
+        <span class="link-mono">{{ n.cta }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

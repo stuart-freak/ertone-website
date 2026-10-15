@@ -1,0 +1,40 @@
+{% extends "_legal.html" %}
+{% block legal %}
+<p>This policy explains how {{ site.legal_name }} collects and uses personal information through this website, and the choices you have.</p>
+
+<h2>Who we are</h2>
+<p>{{ site.legal_name }} is a company registered in England and Wales (company number {{ site.company_number }}) at {{ site.address_one_line }}. We are the controller of the personal information described here. You can contact us about privacy at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or on {{ site.phone }}.</p>
+
+<h2>What we collect</h2>
+<ul>
+  <li>Details you send through our quote, contact and newsletter forms, such as your name, company, email address, phone number and message.</li>
+  <li>Drawings, photos and other files you attach to an enquiry.</li>
+  <li>The page you sent the enquiry from and, where present, the campaign that brought you to the site (for example a Google Ads click reference).</li>
+  <li>With your permission, information about how you use the site, collected by analytics and advertising cookies. See our <a href="{{ u('/cookies') }}">cookie policy</a>.</li>
+</ul>
+
+<h2>How we use it</h2>
+<ul>
+  <li>To reply to your enquiry and prepare a quote.</li>
+  <li>To manage our relationship with you as a customer or potential customer, using our customer relationship management system.</li>
+  <li>To send you our newsletter, if you ask for it.</li>
+  <li>To understand which pages and campaigns work, and to improve the site, if you accept analytics and advertising cookies.</li>
+</ul>
+<p>We answer enquiries and run our business on the basis of our legitimate interests. When we prepare a quote, we are taking steps at your request before entering a contract. We only send the newsletter and use non essential cookies with your consent, which you can withdraw at any time.</p>
+
+<h2>Your drawings and files</h2>
+<p>Files attached to an enquiry are stored privately and can only be opened by our team through secure, time limited links. We treat drawings and designs as confidential and only use them to assess and quote for your project.</p>
+
+<h2>Who we share it with</h2>
+<p>We do not sell your information. We share it only with service providers who help us run the site and our business, under contracts that require them to protect it. These include our website host, our email delivery provider, our customer relationship management provider and, if you accept cookies, Google. Some of these providers may process information outside the UK, in which case appropriate safeguards are in place.</p>
+
+<h2>How long we keep it</h2>
+<p>We keep enquiry details and attached files for as long as we need them to respond and follow up, and customer records for as long as we need them for accounting and legal purposes. Newsletter details are kept until you unsubscribe.</p>
+
+<h2>Your rights</h2>
+<p>You can ask to see the information we hold about you, and ask us to correct it, delete it, restrict how we use it or send it to you in a portable format. You can also object to how we use it, and unsubscribe from our newsletter at any time. To do any of this, email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+<p>If you are unhappy with how we have handled your information, you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a>.</p>
+
+<h2>Changes to this policy</h2>
+<p>We may update this policy from time to time. The date at the top shows when it last changed.</p>
+{% endblock %}

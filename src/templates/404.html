@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="wrap notice">
+  <p class="eyebrow">Error 404</p>
+  <h1 class="h2 h2--xl">This page has moved or no longer exists.</h1>
+  <p class="lead muted" style="max-width:640px">Try one of the pages below, or call us on <a href="{{ tel(site.phone) }}" style="color:var(--text)">{{ site.phone }}</a>.</p>
+  <div class="btns">
+    <a class="btn btn--mint" href="{{ u('/') }}">Home</a>
+    <a class="btn btn--ghost" href="{{ u('/services') }}">Services</a>
+    <a class="btn btn--ghost" href="{{ u('/news') }}">News and guides</a>
+    <a class="btn btn--ghost" href="{{ u('/contact') }}">Contact</a>
+  </div>
+</section>
+{% endblock %}

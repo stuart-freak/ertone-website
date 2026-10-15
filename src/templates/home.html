@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="hero hero--home">
+  {{ img('hero-home-factory', '100vw', 'hero__img', 'Injection moulding presses with robot arms on a factory floor', eager=true, fetch_high=true) }}
+  <video class="hero__img hero__video" autoplay muted loop playsinline preload="metadata" poster="{{ asset('video/hero-home-poster.jpg') }}" aria-hidden="true" tabindex="-1">
+    <source src="{{ asset('video/hero-home.webm') }}" type="video/webm">
+    <source src="{{ asset('video/hero-home.mp4') }}" type="video/mp4">
+  </video>
+  <div class="wrap hero__inner">
+    <p class="eyebrow hero__eyebrow-mobile">{{ page.hero_eyebrow }}</p>
+    <h1 class="home-title"><span class="home-title__l1">{{ page.hero_l1 }}</span><span class="home-title__l2">{{ page.hero_l2 }}</span></h1>
+    <p class="hero__text-mobile">{{ page.hero_mobile_text }}</p>
+    <div class="btns">
+      <a class="btn btn--mint" href="{{ u('/quote') }}">Start a project {{ m.arrow() }}</a>
+      <a class="btn btn--ghost" href="#capabilities">View capabilities</a>
+    </div>
+  </div>
+</section>
+<div class="stats">
+  <div class="wrap">
+    <dl class="stats__bar">
+      {% for st in page.stats %}
+      <div class="stat{% if st.mobile_only %} stat--mobile{% endif %}"><dt class="stat__label">{{ st.label }}</dt><dd class="stat__value" style="margin:0">{{ st.value }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</div>
+
+<section class="section" id="capabilities">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(1, 'Capabilities') }}
+      <h2 class="h2">{{ page.capabilities_title.split('. ')[0] }}.<br>{{ page.capabilities_title.split('. ')[1] }}</h2>
+    </div>
+    <div class="cap">
+      <div class="cap__img">{{ img('cap-facility', '(max-width: 900px) 100vw, 48vw', '', 'Engineer checking a moulding inside an injection moulding press at Ertone') }}</div>
+      <div class="acc" data-exclusive>
+        {% for c in page.capabilities %}{% set s = svc_by[c.service] %}
+        <details class="acc__item"{% if loop.first %} open{% endif %}>
+          <summary><span class="acc__num">{{ '%02d' % loop.index }}</span><h3 class="acc__title">{{ c.title }}</h3><span class="acc__sign" aria-hidden="true"></span></summary>
+          <div class="acc__body">
+            <p>{{ c.text }}</p>
+            <ul class="tags">{% for t in s.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
+            <a class="link-mono" href="{{ u('/services/' ~ s.slug) }}">View {{ s.name|lower }}</a>
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(2, 'Services') }}
+      <h2 class="h2">Our services</h2>
+    </div>
+    {{ m.carousel(svc_cards(), 'Our services') }}
+  </div>
+</section>
+
+{{ m.process(3, text=page.process_text, divided=true, icons=true) }}
+
+<section class="section">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(4, 'Industries') }}
+      <h2 class="h2">Industries we<br>work with</h2>
+    </div>
+    {{ m.carousel(sec_cards(), 'Industries we work with') }}
+  </div>
+</section>
+
+{{ m.banner(page.banner_title, page.banner_text, page.banner_cta, '/services/closed-loop-recycling') }}
+{% endblock %}

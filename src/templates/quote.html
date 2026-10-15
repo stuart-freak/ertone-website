@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+{{ m.hero('hero-design-prototype', page.hero_title, page.hero_text, None, None, cls='hero--page hero--soft') }}
+{{ m.quote_panel(1, 'q', None, "Let's talk about your part.", h1=true) }}
+{{ m.process(2) }}
+{{ m.faq(3, 'Frequently asked questions.', site.faqs_moulding) }}
+{% endblock %}

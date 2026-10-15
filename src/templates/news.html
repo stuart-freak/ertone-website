@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+{{ m.hero('hero-news', page.hero_title, page.hero_text, None, None, cls='hero--page hero--soft') }}
+{% set f = articles[0] %}
+<section class="section">
+  <div class="wrap">
+    {{ m.eyebrow(1, 'Latest') }}
+    <a class="featured" href="{{ u('/news/' ~ f.slug) }}">
+      <div class="featured__img">{{ img(f.img, '(max-width: 900px) 100vw, 55vw', '', '') }}</div>
+      <div class="featured__text">
+        <div class="meta"><span class="cat-tag">{{ f.category }}</span></div>
+        <h2 class="featured__title">{{ f.title }}</h2>
+        <p class="muted">{{ f.excerpt }}</p>
+        <span class="link-mono">Read article</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(2, 'All articles') }}
+      <h2 class="h2">{{ page.grid_title }}</h2>
+    </div>
+    <div class="chips" role="group" aria-label="Filter articles">
+      <button class="chip" type="button" data-filter="All" aria-pressed="true">All</button>
+      {% for c in categories %}<button class="chip" type="button" data-filter="{{ c }}" aria-pressed="false">{{ c }}</button>{% endfor %}
+    </div>
+    <div class="articles" data-articles>
+      {% for a in articles[1:] %}
+      <a class="article-card" href="{{ u('/news/' ~ a.slug) }}" data-cat="{{ a.category }}">
+        <div class="article-card__img">{{ img(a.img, '(max-width: 700px) 100vw, (max-width: 1180px) 50vw, 33vw', '', '') }}</div>
+        <div class="meta"><span class="cat">{{ a.category }}</span></div>
+        <h3 class="article-card__title">{{ a.title }}</h3>
+        <p class="article-card__text">{{ a.excerpt }}</p>
+        <span class="link-mono">Read article</span>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="load-more"><button class="btn btn--ghost" type="button" data-load-more>Load more articles</button></div>
+  </div>
+</section>
+
+<section class="band-light section">
+  <div class="wrap newsletter">
+    <div class="heading-group">
+      {{ m.eyebrow(3, 'Stay in touch', dark=true) }}
+      <h2 class="h2">{{ page.newsletter_title }}</h2>
+      <p style="color:var(--dark-muted)">{{ page.newsletter_text }}</p>
+      <p class="small" style="color:var(--dark-muted)">You can unsubscribe at any time. See our <a href="{{ u('/privacy') }}">privacy policy</a>.</p>
+    </div>
+    <form class="newsletter__form form" data-form="newsletter" novalidate style="display:flex">
+      <div class="field" style="flex:1"><label class="sr-only" for="nl-email">Email</label><input class="input" id="nl-email" name="email" type="email" required placeholder="name@company.co.uk" autocomplete="email"><span class="field__error" role="alert"></span></div>
+      <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button class="btn btn--ink" type="submit">Subscribe {{ m.arrow() }}</button>
+      <div class="form__status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+{% endblock %}

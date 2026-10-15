@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<article>
+  <header class="wrap article-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ u('/news') }}">News</a> / <span>{{ a.category }}</span>{% if a.date_label %} / <time datetime="{{ a.date }}">{{ a.date_label }}</time>{% endif %}</nav>
+    <h1 class="h2">{{ a.title }}</h1>
+    <p class="lead">{{ a.excerpt }}</p>
+  </header>
+  <div class="wrap">
+    <div class="article-hero">{{ img(a.img, '(max-width: 1440px) 100vw, 1380px', '', '', eager=true, fetch_high=true) }}</div>
+    <div class="article-body prose">
+      {% if a.pending %}
+      <div class="pending">Preview note. The full text of this article moves across from the current site with the WordPress export, so it keeps its search ranking. The old address will redirect here.</div>
+      {% else %}
+      {{ body }}
+      {% endif %}
+    </div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap">
+    <div class="heading-group">
+      <p class="eyebrow">Keep reading</p>
+      <h2 class="h2">More from the team.</h2>
+    </div>
+    <div class="articles">
+      {% for r in related %}
+      <a class="article-card" href="{{ u('/news/' ~ r.slug) }}">
+        <div class="article-card__img">{{ img(r.img, '(max-width: 700px) 100vw, (max-width: 1180px) 50vw, 33vw', '', '') }}</div>
+        <div class="meta"><span class="cat">{{ r.category }}</span></div>
+        <h3 class="article-card__title">{{ r.title }}</h3>
+        <p class="article-card__text">{{ r.excerpt }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{{ m.cta('Have a part in mind?') }}
+{% endblock %}

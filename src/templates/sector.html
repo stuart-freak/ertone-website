@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+{{ m.hero(s.img.hero, s.name, s.hero_line, [('Sectors', '/sectors'), (s.name, None)], [{'label': 'Start a project', 'href': '/quote', 'arrow': true}, {'label': 'View downloads', 'href': '/downloads', 'cls': 'btn--ghost'}], h1cls='h1--service') }}
+
+<section class="section">
+  <div class="wrap split">
+    <div class="split__text">
+      <div class="heading-group">
+        {{ m.eyebrow(1, 'Overview') }}
+        <h2 class="h2">{{ s.overview_title }}</h2>
+      </div>
+      <div class="prose body">{% for p in s.overview %}<p>{{ p }}</p>{% endfor %}</div>
+    </div>
+    <div class="split__img split__img--tall">{{ img(s.img.overview, '(max-width: 900px) 100vw, 55vw', '', '') }}</div>
+  </div>
+</section>
+
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(2, 'The sector') }}
+      <h2 class="h2">{{ s.trio_title }}</h2>
+    </div>
+    {{ m.lcards(s.trio) }}
+  </div>
+</section>
+{% set n = 3 %}
+{% if s.products_ready %}
+<section class="band-light section">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(3, s.products_label or 'Parts we make', dark=true) }}
+      <h2 class="h2">{{ s.products_title }}</h2>
+    </div>
+    <div class="products">
+      {% for p in s.products %}
+      <div class="product">
+        <div class="product__img">{{ img(p.img, '(max-width: 900px) 90vw, 30vw', '', p.name) }}</div>
+        <h3 class="product__name">{{ p.name }}</h3>
+        <p class="product__text">{{ p.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% set n = 4 %}
+{% endif %}
+{{ m.facts_panel(n, 'At a glance.', s.facts, tight=not s.products_ready) }}
+{{ m.process(n + 1) }}
+{{ m.faq(n + 2, 'Frequently asked questions.', faqs, plain=true) }}
+{{ m.industries(n + 3, s.slug) }}
+{{ m.related(n + 4, 'Services behind the parts.', s.related) }}
+{{ m.quote_panel(n + 5, 'q') }}
+{% endblock %}

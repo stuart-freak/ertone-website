@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<article>
+  <header class="wrap article-head">
+    <p class="eyebrow">Legal</p>
+    <h1 class="h2">{{ heading }}</h1>
+    <p class="lead">Last updated {{ updated }}</p>
+  </header>
+  <div class="wrap">
+    <div class="prose" style="max-width:760px; padding-bottom: var(--section)">
+      {% block legal %}{% endblock %}
+    </div>
+  </div>
+</article>
+{% endblock %}
