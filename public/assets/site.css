@@ -704,6 +704,12 @@ details[open]:not(.is-closing) > summary .acc__sign::after, details[open]:not(.i
 /* 12. Inside the tool. Scroll runs one moulding cycle: inject, cool, open, eject */
 .mould { display: grid; grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr); gap: clamp(28px, 3.3vw, 48px); align-items: center; margin-top: clamp(32px, 3.9vw, 56px); background: var(--panel); border-radius: var(--radius); padding: clamp(24px, 3.3vw, 48px); }
 .mould__svg { display: block; width: 100%; height: auto; }
+.mould-track { margin-top: clamp(32px, 3.9vw, 56px); }
+.mould-track > .mould { margin-top: 0; }
+.mould-spacer { display: none; }
+/* On larger screens the panel holds in the middle of the screen while the cycle plays, then carries on up the page */
+.motion .mould-track.is-pinned > .mould { position: sticky; top: var(--mould-top, 100px); z-index: 2; }
+.motion .mould-track.is-pinned > .mould-spacer { display: block; height: 130vh; }
 .m-steel { fill: #4a4f55; stroke: #80878e; stroke-width: 1.5; }
 .m-hatch { fill: url(#m-hatch); }
 .m-void { fill: var(--panel); }

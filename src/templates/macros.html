@@ -250,6 +250,7 @@
 {% macro loop_svg(stations, titled=true) %}<svg class="loop" viewBox="0 0 520 440"{% if titled %} role="img" aria-label="The closed loop. {% for st in stations %}{{ st.title }}{% if not loop.last %}, then {% endif %}{% endfor %}, then back round again."{% else %} aria-hidden="true" focusable="false"{% endif %}>{% if not titled %}<circle class="loop__bg" cx="260" cy="240" r="214"/>{% endif %}<circle class="loop__track" cx="260" cy="240" r="150"/><circle class="loop__inner" cx="260" cy="240" r="96"/><circle class="loop__draw" cx="260" cy="240" r="150" pathLength="1" transform="rotate(-90 260 240)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(348.2 118.6) rotate(36)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(402.7 286.4) rotate(108)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(260.0 390.0) rotate(180)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(117.3 286.4) rotate(252)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(171.8 118.6) rotate(324)"/><text class="loop__core" x="260" y="234">CLOSED</text><text class="loop__core" x="260" y="256">LOOP</text><g class="loop__runner"><circle cx="260" cy="90" r="16" opacity=".22"/><circle cx="260" cy="90" r="7"/></g><g class="loop__node" style="--k:0"><circle cx="260.0" cy="90.0" r="24"/><text x="260.0" y="90.0">01</text></g><text class="loop__label" style="--k:0" x="260" y="50" text-anchor="middle">{{ stations[0].short|upper }}</text><g class="loop__node" style="--k:1"><circle cx="402.7" cy="193.6" r="24"/><text x="402.7" y="193.6">02</text></g><text class="loop__label" style="--k:1" x="438" y="198" text-anchor="start">{{ stations[1].short|upper }}</text><g class="loop__node" style="--k:2"><circle cx="348.2" cy="361.4" r="24"/><text x="348.2" y="361.4">03</text></g><text class="loop__label" style="--k:2" x="348" y="410" text-anchor="middle">{{ stations[2].short|upper }}</text><g class="loop__node" style="--k:3"><circle cx="171.8" cy="361.4" r="24"/><text x="171.8" y="361.4">04</text></g><text class="loop__label" style="--k:3" x="172" y="410" text-anchor="middle">{{ stations[3].short|upper }}</text><g class="loop__node" style="--k:4"><circle cx="117.3" cy="193.6" r="24"/><text x="117.3" y="193.6">05</text></g><text class="loop__label" style="--k:4" x="82" y="198" text-anchor="end">{{ stations[4].short|upper }}</text></svg>{% endmacro %}
 
 {% macro mould(steps) %}
+<div class="mould-track">
 <div class="mould" data-mould>
   <svg class="mould__svg" viewBox="0 0 1000 440" role="img" aria-labelledby="mould-title">
     <title id="mould-title">Section through an injection mould tool. Molten plastic fills the closed tool and cools, then the moving half opens and ejector pins push the finished part out.</title>
@@ -298,5 +299,7 @@
     </ol>
     <p class="mould__hint">Scroll to run the cycle</p>
   </div>
+</div>
+<div class="mould-spacer" aria-hidden="true"></div>
 </div>
 {% endmacro %}

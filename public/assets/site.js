@@ -452,7 +452,7 @@
     function ease(t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
     var HOT = [246, 194, 122], COOL = [182, 227, 213];
     function draw(p) {
-      var inj = ease(seg(p, .04, .32)), cool = seg(p, .32, .46), open = ease(seg(p, .48, .68)), ej = ease(seg(p, .7, .82)), drop = ease(seg(p, .82, .96));
+      var inj = ease(seg(p, .04, .27)), cool = seg(p, .27, .38), open = ease(seg(p, .4, .6)), ej = ease(seg(p, .62, .74)), drop = ease(seg(p, .74, .88));
       melt.setAttribute("width", (180 * inj).toFixed(1));
       var col = "rgb(" + HOT.map(function (h, i) { return Math.round(h + (COOL[i] - h) * cool); }).join(",") + ")";
       plastic.forEach(function (el) { el.style.fill = col; });
@@ -460,36 +460,52 @@
       gEj.setAttribute("transform", "translate(" + (-64 * ej).toFixed(1) + " 0)");
       gPart.setAttribute("transform", "translate(" + (300 * open - 64 * ej - 12 * drop).toFixed(1) + " " + (70 * drop).toFixed(1) + ") rotate(" + (-9 * drop).toFixed(2) + " 290 220)");
       lMelt.style.opacity = (Math.min(1, inj * 4) * (1 - cool)).toFixed(2);
-      lEj.style.opacity = seg(p, .66, .72).toFixed(2);
-      lPart.style.opacity = seg(p, .9, .97).toFixed(2);
-      var active = p < .32 ? 0 : p < .47 ? 1 : p < .7 ? 2 : 3;
+      lEj.style.opacity = seg(p, .6, .66).toFixed(2);
+      lPart.style.opacity = seg(p, .84, .9).toFixed(2);
+      var active = p < .27 ? 0 : p < .39 ? 1 : p < .61 ? 2 : 3;
       steps.forEach(function (li, i) { li.classList.toggle("is-on", i === active); });
     }
     if (!MOTION) { draw(1); return; }
     var target = 0, cur = 0, raf = null;
     function tick() {
-      cur += (target - cur) * .14;
+      cur += (target - cur) * .2;
       if (Math.abs(target - cur) < .0015) cur = target;
       draw(cur);
       raf = cur !== target ? window.requestAnimationFrame(tick) : null;
     }
+    var track = box.parentNode, spacer = $(".mould-spacer", track);
     var stacked = window.matchMedia("(max-width: 900px)");
     var list = $(".mould__steps", box);
+    var pinTop = 0;
+    function layout() {
+      // pin only when the whole panel fits on screen below the nav bar
+      var vh = window.innerHeight, navH = nav ? nav.offsetHeight : 0, h = box.offsetHeight;
+      var fits = !stacked.matches && h <= vh - navH - 32;
+      track.classList.toggle("is-pinned", fits);
+      pinTop = Math.max(navH + 12, Math.round((vh - h) / 2));
+      track.style.setProperty("--mould-top", pinTop + "px");
+    }
     function measure() {
       var vh = window.innerHeight, r;
-      if (stacked.matches && list) {
+      if (track.classList.contains("is-pinned")) {
+        // the whole cycle plays while the panel is held in the middle of the screen
+        r = track.getBoundingClientRect();
+        target = Math.min(1, Math.max(0, (pinTop - r.top) / Math.max(1, spacer.offsetHeight)));
+      } else if (stacked.matches && list) {
         // on phones the drawing stays pinned while the steps scroll underneath
         r = list.getBoundingClientRect();
         target = Math.min(1, Math.max(0, (vh * .85 - r.top) / Math.max(1, r.height)));
       } else {
+        // short screens: run the cycle as the drawing crosses the middle of the screen
         r = svg.getBoundingClientRect();
-        var start = vh * .9, end = vh * .18;
-        target = Math.min(1, Math.max(0, (start - r.top) / (start - end)));
+        var mid = r.top + r.height / 2;
+        target = Math.min(1, Math.max(0, (vh * .8 - mid) / (vh * .5)));
       }
       if (!raf) raf = window.requestAnimationFrame(tick);
     }
+    layout();
+    window.addEventListener("resize", function () { layout(); measure(); });
     window.addEventListener("scroll", measure, { passive: true });
-    window.addEventListener("resize", measure);
     draw(0);
     measure();
   }
