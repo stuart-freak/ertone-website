@@ -45,7 +45,7 @@
     </div>
     <ol class="flow">
       {% for st in site.process %}
-      <li class="flow__step">
+      <li class="flow__step" style="--s:{{ loop.index0 }}">
         <span class="flow__node">{{ icon(st.icon) }}</span>
         <span class="step__num">Step {{ '%02d' % loop.index }}</span>
         <h3 class="step__title">{{ st.title }}</h3>
@@ -155,11 +155,12 @@
 </section>
 {% endmacro %}
 
-{% macro banner(title, text, cta_label, href, image='banner-circular') %}
+{% macro banner(title, text, cta_label, href, image='banner-circular', loop_stations=None) %}
 <section class="section section--tight-top">
   <div class="wrap">
     <div class="banner">
       {{ img(image, '(max-width: 1440px) 100vw, 1380px', '', '') }}
+      {% if loop_stations %}<div class="banner__loop" data-loop aria-hidden="true">{{ loop_svg(loop_stations, false) }}</div>{% endif %}
       <div class="banner__inner">
         <h2 class="banner__title">{{ title }}</h2>
         <p class="banner__text">{{ text }}</p>
@@ -244,4 +245,58 @@
     </div>
   </div>
 </section>
+{% endmacro %}
+
+{% macro loop_svg(stations, titled=true) %}<svg class="loop" viewBox="0 0 520 440"{% if titled %} role="img" aria-label="The closed loop. {% for st in stations %}{{ st.title }}{% if not loop.last %}, then {% endif %}{% endfor %}, then back round again."{% else %} aria-hidden="true" focusable="false"{% endif %}>{% if not titled %}<circle class="loop__bg" cx="260" cy="240" r="214"/>{% endif %}<circle class="loop__track" cx="260" cy="240" r="150"/><circle class="loop__inner" cx="260" cy="240" r="96"/><circle class="loop__draw" cx="260" cy="240" r="150" pathLength="1" transform="rotate(-90 260 240)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(348.2 118.6) rotate(36)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(402.7 286.4) rotate(108)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(260.0 390.0) rotate(180)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(117.3 286.4) rotate(252)"/><path class="loop__chev" d="M-4 -6 L3 0 L-4 6" transform="translate(171.8 118.6) rotate(324)"/><text class="loop__core" x="260" y="234">CLOSED</text><text class="loop__core" x="260" y="256">LOOP</text><g class="loop__runner"><circle cx="260" cy="90" r="16" opacity=".22"/><circle cx="260" cy="90" r="7"/></g><g class="loop__node" style="--k:0"><circle cx="260.0" cy="90.0" r="24"/><text x="260.0" y="90.0">01</text></g><text class="loop__label" style="--k:0" x="260" y="50" text-anchor="middle">{{ stations[0].short|upper }}</text><g class="loop__node" style="--k:1"><circle cx="402.7" cy="193.6" r="24"/><text x="402.7" y="193.6">02</text></g><text class="loop__label" style="--k:1" x="438" y="198" text-anchor="start">{{ stations[1].short|upper }}</text><g class="loop__node" style="--k:2"><circle cx="348.2" cy="361.4" r="24"/><text x="348.2" y="361.4">03</text></g><text class="loop__label" style="--k:2" x="348" y="410" text-anchor="middle">{{ stations[2].short|upper }}</text><g class="loop__node" style="--k:3"><circle cx="171.8" cy="361.4" r="24"/><text x="171.8" y="361.4">04</text></g><text class="loop__label" style="--k:3" x="172" y="410" text-anchor="middle">{{ stations[3].short|upper }}</text><g class="loop__node" style="--k:4"><circle cx="117.3" cy="193.6" r="24"/><text x="117.3" y="193.6">05</text></g><text class="loop__label" style="--k:4" x="82" y="198" text-anchor="end">{{ stations[4].short|upper }}</text></svg>{% endmacro %}
+
+{% macro mould(steps) %}
+<div class="mould" data-mould>
+  <svg class="mould__svg" viewBox="0 0 1000 440" role="img" aria-labelledby="mould-title">
+    <title id="mould-title">Section through an injection mould tool. Molten plastic fills the closed tool and cools, then the moving half opens and ejector pins push the finished part out.</title>
+    <defs>
+      <pattern id="m-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="2" height="9" fill="rgba(255,255,255,.07)"/></pattern>
+      <clipPath id="m-melt"><rect class="m-melt" x="150" y="0" width="180" height="440"/></clipPath>
+    </defs>
+    <g class="m-unit">
+      <path class="m-steel" d="M30 120 H100 L80 190 H50 Z"/>
+      <circle class="m-pellet" cx="52" cy="136" r="4"/><circle class="m-pellet" cx="66" cy="131" r="4"/><circle class="m-pellet" cx="80" cy="138" r="4"/><circle class="m-pellet" cx="58" cy="150" r="4"/><circle class="m-pellet" cx="73" cy="153" r="4"/><circle class="m-pellet" cx="65" cy="167" r="4"/>
+      <rect class="m-steel" x="10" y="190" width="112" height="60" rx="4"/>
+      <path class="m-flight" d="M22 196 L32 244 M36 196 L46 244 M50 196 L60 244 M64 196 L74 244 M78 196 L88 244 M92 196 L102 244"/>
+      <path class="m-steel" d="M122 202 L150 213 V227 L122 238 Z"/>
+    </g>
+    <path class="m-steel" d="M150 40 H330 V140 H250 V300 H330 V400 H150 Z"/>
+    <path class="m-hatch" d="M150 40 H330 V140 H250 V300 H330 V400 H150 Z"/>
+    <rect class="m-void" x="150" y="213" width="100" height="14"/>
+    <g class="m-b">
+      <rect class="m-steel" x="490" y="40" width="100" height="22"/>
+      <rect class="m-steel" x="490" y="378" width="100" height="22"/>
+      <rect class="m-steel" x="590" y="20" width="32" height="400"/>
+      <path class="m-steel" d="M330 40 H490 V400 H330 V284 H266 V156 H330 Z"/>
+      <path class="m-hatch" d="M330 40 H490 V400 H330 V284 H266 V156 H330 Z"/>
+      <g class="m-ej">
+        <rect class="m-pin" x="266" y="180" width="310" height="7"/>
+        <rect class="m-pin" x="266" y="253" width="310" height="7"/>
+        <rect class="m-steel" x="565" y="140" width="20" height="160"/>
+        <text class="m-label m-label--mint m-l-ej" x="575" y="122" text-anchor="middle">EJECTOR PINS</text>
+      </g>
+      <text class="m-label" x="410" y="430" text-anchor="middle">MOVING HALF</text>
+    </g>
+    <g class="m-part">
+      <g clip-path="url(#m-melt)">
+        <path class="m-plastic" d="M250 140 H330 V156 H266 V284 H330 V300 H250 Z"/>
+        <rect class="m-plastic" x="150" y="213" width="100" height="14"/>
+      </g>
+      <text class="m-label m-label--mint m-l-part" x="290" y="336" text-anchor="middle">FINISHED PART</text>
+    </g>
+    <text class="m-label" x="240" y="430" text-anchor="middle">FIXED HALF</text>
+    <text class="m-label" x="66" y="276" text-anchor="middle">INJECTION UNIT</text>
+    <text class="m-label m-label--mint m-l-melt" x="200" y="200" text-anchor="middle">MELT</text>
+  </svg>
+  <div>
+    <ol class="mould__steps">
+      {% for st in steps %}<li><span class="n">{{ '%02d' % loop.index }}</span><h3>{{ st.title }}</h3><p>{{ st.text }}</p></li>{% endfor %}
+    </ol>
+    <p class="mould__hint">Scroll to run the cycle</p>
+  </div>
+</div>
 {% endmacro %}

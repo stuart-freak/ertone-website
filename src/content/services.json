@@ -60,7 +60,25 @@
     },
     "faqs": "moulding",
     "designed": true,
-    "tier": "core"
+    "tier": "core",
+    "cycle": [
+      {
+        "title": "Inject",
+        "text": "Molten plastic is forced into the closed tool under high pressure."
+      },
+      {
+        "title": "Cool",
+        "text": "The plastic sets in the cavity and takes the exact shape of the tool."
+      },
+      {
+        "title": "Open",
+        "text": "The moving half pulls back, taking the part with it on the core."
+      },
+      {
+        "title": "Eject",
+        "text": "Ejector pins push the finished part off, and the tool closes for the next one."
+      }
+    ]
   },
   {
     "slug": "tool-manufacture",
@@ -313,7 +331,34 @@
     },
     "faqs": null,
     "designed": true,
-    "tier": "core"
+    "tier": "core",
+    "loop": [
+      {
+        "short": "Collect",
+        "title": "Collect",
+        "text": "We collect used and damaged products from your site, free of charge."
+      },
+      {
+        "short": "Sort",
+        "title": "Clean and sort",
+        "text": "Everything is cleaned and sorted by material at our factory in Aylesbury."
+      },
+      {
+        "short": "Pelletise",
+        "title": "Shred and pelletise",
+        "text": "The sorted plastic is shredded and turned into pellets ready to mould."
+      },
+      {
+        "short": "Mould",
+        "title": "Mould",
+        "text": "The recycled material is moulded into new products on our presses."
+      },
+      {
+        "short": "Deliver",
+        "title": "Deliver",
+        "text": "New products go to your distribution centre as normal. At the end of their life they come back round."
+      }
+    ]
   },
   {
     "slug": "vacuum-forming",

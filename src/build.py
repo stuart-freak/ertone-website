@@ -254,7 +254,7 @@ def hl_icon(title):
         if re.search(rx, t):
             return name
     return "hl-check"
-env.globals.update(hl_icon=hl_icon, svc_cards=svc_cards, sec_cards=sec_cards, pages_home=pages["home"])
+env.globals.update(hl_icon=hl_icon, svc_cards=svc_cards, sec_cards=sec_cards, pages_home=pages["home"], closed_loop=svc_by["closed-loop-recycling"].get("loop"))
 LEGAL_UPDATED = ordinal_date(datetime.date(2026, 10, 14))
 env.filters["nl2br"] = lambda s: Markup("<br>".join(html.escape(x) for x in str(s).split("\n")))
 

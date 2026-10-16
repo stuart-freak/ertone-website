@@ -18,4 +18,12 @@ npm test
 python3 tools/check.py public
 ```
 
+## Motion
+
+All animation lives in the Motion block at the end of `src/assets/site.css` and the motion section of `src/assets/site.js`. A small script in the page head adds a `motion` class to `<html>` unless the visitor's device asks for reduced motion. It takes the class off again if `site.js` has not started within three seconds, so every page always renders in full without animation. The reveal selector list appears in both files and the two must match.
+
+- Scroll reveals, odometer figures, image fade in, hover states, smooth accordions
+- Page transitions with the browser's View Transitions, where a card photo grows into the next page's hero
+- Process flow, closed loop diagram (`loop` in `services.json`) and the mould cycle on the injection moulding page (`cycle` in `services.json`)
+
 See `docs/DYLAN.md` for hosting and the CRM connection, `docs/CRM-INTAKE.md` for the webhook format and `docs/LAUNCH.md` for what is still to confirm.

@@ -15,22 +15,52 @@
     <div class="split__img">{{ img(s.img.overview, '(max-width: 900px) 100vw, 55vw', '', '') }}</div>
   </div>
 </section>
+{% set ns = namespace(n=2) %}
+{% if s.cycle %}
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(ns.n, 'Inside the tool') }}
+      <h2 class="h2">How a part is made.</h2>
+    </div>
+    {{ m.mould(s.cycle) }}
+  </div>
+</section>
+{% set ns.n = ns.n + 1 %}
+{% endif %}
+{% if s.loop %}
+<section class="section section--tight-top">
+  <div class="wrap">
+    <div class="heading-group">
+      {{ m.eyebrow(ns.n, 'How it works') }}
+      <h2 class="h2">How the loop works.</h2>
+    </div>
+    <div class="loop-panel" data-loop>
+      <div class="loop-panel__fig">{{ m.loop_svg(s.loop) }}</div>
+      <ol class="loop-steps">
+        {% for st in s.loop %}<li style="--k:{{ loop.index0 }}"><span class="n">{{ '%02d' % loop.index }}</span><h3>{{ st.title }}</h3><p>{{ st.text }}</p></li>{% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+{% set ns.n = ns.n + 1 %}
+{% endif %}
 
 <section class="section section--tight-top">
   <div class="wrap">
     <div class="heading-group">
-      {{ m.eyebrow(2, 'Capabilities') }}
+      {{ m.eyebrow(ns.n, 'Capabilities') }}
       <h2 class="h2">What we offer.</h2>
     </div>
     {{ m.lcards(s.capabilities) }}
   </div>
 </section>
-
-{{ m.facts_panel(3, 'Key facts.', s.facts) }}
-{% set n = 4 %}
-{% if faqs %}{{ m.faq(4, 'Frequently asked questions.', faqs) }}{% set n = 5 %}{% endif %}
-{{ m.process(n) }}
-{{ m.industries(n + 1) }}
-{{ m.related(n + 2, 'More from Ertone.', s.related) }}
-{{ m.quote_panel(n + 3, 'q', s.slug) }}
+{% set ns.n = ns.n + 1 %}
+{{ m.facts_panel(ns.n, 'Key facts.', s.facts) }}
+{% set ns.n = ns.n + 1 %}
+{% if faqs %}{{ m.faq(ns.n, 'Frequently asked questions.', faqs) }}{% set ns.n = ns.n + 1 %}{% endif %}
+{{ m.process(ns.n) }}
+{{ m.industries(ns.n + 1) }}
+{{ m.related(ns.n + 2, 'More from Ertone.', s.related) }}
+{{ m.quote_panel(ns.n + 3, 'q', s.slug) }}
 {% endblock %}

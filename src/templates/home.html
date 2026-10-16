@@ -34,7 +34,7 @@
       <h2 class="h2">{{ page.capabilities_title.split('. ')[0] }}.<br>{{ page.capabilities_title.split('. ')[1] }}</h2>
     </div>
     <div class="cap">
-      <div class="cap__img">{{ img('cap-facility', '(max-width: 900px) 100vw, 48vw', '', 'Engineer checking a moulding inside an injection moulding press at Ertone') }}</div>
+      <div class="cap__img">{% for c in page.capabilities %}{{ img(c.img, '(max-width: 900px) 100vw, 48vw', 'is-on' if loop.first else '', c.alt if loop.first else '') }}{% endfor %}</div>
       <div class="acc" data-exclusive>
         {% for c in page.capabilities %}{% set s = svc_by[c.service] %}
         <details class="acc__item"{% if loop.first %} open{% endif %}>
@@ -73,5 +73,5 @@
   </div>
 </section>
 
-{{ m.banner(page.banner_title, page.banner_text, page.banner_cta, '/services/closed-loop-recycling') }}
+{{ m.banner(page.banner_title, page.banner_text, page.banner_cta, '/services/closed-loop-recycling', loop_stations=closed_loop) }}
 {% endblock %}

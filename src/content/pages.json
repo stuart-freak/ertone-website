@@ -30,22 +30,27 @@
       {
         "service": "injection-moulding",
         "title": "Injection moulding",
-        "text": "Our core discipline. Production on 100 - 600 tonne presses, from small precision components to large structural mouldings, held to drawing run after run."
+        "text": "Our core discipline. Production on 100 - 600 tonne presses, from small precision components to large structural mouldings, held to drawing run after run.",
+        "img": "cap-facility",
+        "alt": "Engineer checking a moulding inside an injection moulding press at Ertone"
       },
       {
         "service": "tool-manufacture",
         "title": "Tool manufacture",
-        "text": "Production tools designed, built and trialled. Or move your existing tool to Ertone and get it back into production."
+        "text": "Production tools designed, built and trialled. Or move your existing tool to Ertone and get it back into production.",
+        "img": "card-injection"
       },
       {
         "service": "design-prototype",
         "title": "Design and prototyping",
-        "text": "Test the idea early. We design, refine and prototype so the final part works first time."
+        "text": "Test the idea early. We design, refine and prototype so the final part works first time.",
+        "img": "ov-design-prototype"
       },
       {
         "service": "secondary-operations",
         "title": "Secondary operations",
-        "text": "Print, weld, assemble, pack and dispatch, all under one roof in Aylesbury."
+        "text": "Print, weld, assemble, pack and dispatch, all under one roof in Aylesbury.",
+        "img": "ov-fabrication-assembly"
       }
     ],
     "process_text": "One team owns your part throughout, with no handovers between design house, toolmaker and moulder.",
